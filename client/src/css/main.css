@@ -1,0 +1,733 @@
+body {
+    background-color: #2c3333;
+}
+
+:root {
+    font-size: 2vh;
+}
+
+.divisiondiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgdiv {
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+}
+
+.Login_division {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.formdiv {
+    margin: auto;
+    display: block;
+    background-color: rgb(217, 217, 217);
+    width: 28%;
+    align-items: center;
+    justify-content: center;
+    border: 10px silver;
+    padding: 1%;
+    border-radius: 3%;
+    margin-top: 3.5rem;
+    box-shadow: 0.4rem 0.2rem 1.40rem 0.4rem #a6b1b1;
+}
+
+.Form_title {
+    font-family: 'Mukta', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.1rem;
+}
+
+.Label {
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.27rem;
+}
+
+.Label_ShowPass {
+    font-size: 1.1rem;
+    font-family: 'Mukta', sans-serif;
+    margin-left: 0.35rem;
+}
+
+.checkBox {
+    margin-top: 0.25rem;
+    height: 1.1rem;
+    width: 1.2rem;
+}
+
+.Icon_title {
+    width: 80%;
+    display: flex;
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.inputDivs {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.1rem;
+    margin-bottom: 0.10rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.regIputDivs {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.1rem;
+    margin-bottom: 0.10rem;
+}
+
+.Input_take {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.2rem;
+    padding-top: 0.30rem;
+    padding-bottom: 0.30rem;
+    padding-left: 0.80rem;
+    background-color: #f2efef;
+    border: 0.1rem solid;
+    border-radius: 0.3rem;
+}
+
+.ShowPassDiv {
+    width: 80%;
+    display: flex;
+    margin-left: 2.3rem;
+    margin-top: -0.90rem;
+}
+
+.SubmitButtonCss {
+    width: 80%;
+    height: 2.2rem;
+    align-self: center;
+    font-size: 1.1rem;
+    font-family: 'Mukta', sans-serif;
+}
+
+.csb-fh {
+    font-size: 1.3rem;
+}
+
+.gdb-font {
+    border: "2px solid black";
+    font-size: 1.3rem;
+    font-family: 'Mukta', sans-serif;
+    box-shadow: 3px 3px 5px 1px rgb(125, 110, 110)
+}
+
+.regSubmitButtonCss {
+    width: 80%;
+    margin-left: 2.3rem;
+    margin-right: auto;
+    height: 2.2rem;
+    font-size: 1.1rem;
+    font-family: 'Mukta', sans-serif;
+}
+
+.Reg_formdiv {
+    display: flex;
+    width: 28%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0rem;
+    margin-bottom: 4rem;
+    align-items: center;
+    background-color: rgb(217, 217, 217);
+    color: black;
+    border-radius: 3%;
+    box-shadow: 0.4rem 0.2rem 1.40rem 0.4rem #a6b1b1;
+}
+
+.SubmitDiv {
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.navItem {
+    color: white;
+    border: 0px;
+    border-radius: 8%;
+}
+
+.maindiv_logo {
+    margin-right: 1rem;
+}
+
+.logo {
+    width: 7rem;
+    height: 3.2rem;
+    margin-bottom: auto;
+    color: white;
+}
+
+.LogoDiv {
+    height: 100%;
+    font-size: 1.7rem;
+    margin-left: 0.75rem;
+    font-family: 'Mukta', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(254, 254, 254);
+    font-style: italic;
+}
+
+.regInputDivs {
+    width: 80%;
+    margin-left: 5rem;
+    margin-right: auto;
+}
+
+.Navbar {
+    background-color: #2c3333;
+}
+
+.NavBarMain {
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.Anchor_tag {
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-left: 0.20rem;
+    margin-right: 0.20rem;
+}
+
+.icons {
+    margin-right: 0.5vh;
+}
+
+.superdiv {
+    display: flex;
+    background-color: rgb(217, 217, 217);
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    border: 10px silver;
+    box-shadow: 3px 10px 40px 10px #ababab;
+    padding: 1%;
+    border-radius: 3%;
+}
+
+.AboutDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+}
+
+.MainAboutDiv {
+    display: flex;
+    width: 80%;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.AboutTitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.AboutLogo {
+    width: 35rem;
+    height: 35rem;
+    /* border-radius: 1.4rem; */
+}
+
+.aboutLogoDiv {
+    width: fit-content;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.75rem;
+    border-radius: 1.4rem;
+    /* background-color: rgb(217, 208, 208); */
+    background-color: #ede1b4;
+
+}
+
+.aboutInfoDiv {
+    width: fit-content;
+    text-align: justify;
+    text-justify: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 3rem;
+}
+
+.aboutInfoDiv p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.headingdiv {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maindiv {
+    display: flex;
+    flex-direction: row;
+    padding: 5vh;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.reachusdiv {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1vh;
+    margin-left: 10vh;
+}
+
+.infodiv {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vh;
+    margin-right: 10vh;
+    padding: 3vh;
+    justify-content: center;
+}
+
+.infodiv div {
+    margin-top: 5vh;
+}
+
+.biheading {
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-style: oblique;
+}
+
+.showMsg {
+    margin-top: 15rem;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Mukta', sans-serif;
+
+}
+
+.showMsg>h2 {
+    font-family: 'Mukta', sans-serif;
+    font-size: 3rem;
+}
+
+.MainHeadingHome {
+    /* color: white; */
+    color: black;
+    display: block;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    font-size: 2.7rem;
+    user-select: none;
+}
+
+
+.MainCardDiv {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.CardBody{
+    margin-top: 1.3rem;
+    padding-right: 1.1rem;
+    padding-left: 1.1rem;
+}
+.SubCardDiv {
+    width: 25rem;
+    grid-template-columns: auto auto;
+    height: max-content;
+    border: 2px solid rgb(225, 221, 221);
+    border-radius: 0.35rem;
+    padding: 0.4rem;
+    margin-right: 4rem;
+    margin-bottom: 7rem;
+}
+
+.SubCardDiv-img{
+    width: 24rem;
+    height: 18rem;
+}
+
+.MainHomeDiv {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+}
+
+.Homelink {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.FooterDiv {
+    background-color: #2c3333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 2rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.FooterDiv>p {
+    align-self: center;
+    margin: auto;
+}
+.photoDiv{
+    width: fit-content;
+    margin-right: 5rem;
+    margin-left: 1rem;
+    border: 2px solid silver;
+    border-radius: 1rem;
+    padding: 0.65rem;
+}
+.itemInfoDiv{
+    font-family: 'Mukta', sans-serif;
+}
+.MainItemDiv{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.itemNameHeading{
+    text-align: left;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.itemPriceHeading{
+    text-align: left;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding-left: 0.6rem;
+    margin-top: 0.4rem;
+    font-size: x-large;
+}
+.ratingHeading{
+    text-align: left;
+    color: white;
+    padding-left: 0.6rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: large;
+}
+.descriptionItem{
+    text-align: left;
+    color: white;
+    padding-left: 0.6rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: large;
+}
+.descriptionItem > p{
+    padding-left: 2rem;
+}
+.buttonsDiv{
+    width: 20%;
+    margin-left: 1rem;
+}
+.buttonsDiv :first-child{
+    margin-right: 2rem;
+}
+
+.categoriesButtonDiv{
+    display: grid;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto auto;
+    margin-top: 1.5rem;
+}
+
+.categoryLinks{
+    margin-right: 1.7rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+.categoryLinks:hover{
+    background-color: rgb(197, 197, 255);
+}
+.categoryLinks:active{
+    background-color: rgb(197, 197, 255);
+}
+.categoryLinks >button{
+    width: 100%;
+}
+.categorySubCards{
+    color:white
+}
+.navLinkRightSide{
+    margin-left: auto;
+    margin-right: 3rem;
+    background-color: rgb(232, 229, 229);
+    border-radius: 0.25rem;
+}
+
+
+.mainWishlistDiv{
+    width: 90%;
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+.headingWishList{
+    font-family: 'Mukta',sans-serif;
+    color:white;
+    margin-right: auto;
+    margin-left: auto;
+    user-select: none;
+}
+.wishlistItem{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.wishlistItemInfo{
+    display: block;
+    margin-left: 3rem;
+    color: white;
+}
+.hrwhite{
+    width: 100%;
+    height: 0.1rem; 
+    background-color: #fff;
+}
+.wishlistItemName{
+    text-align: left;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.wishlistItemPrice{
+    text-align: left;
+    color: white;
+    font-size: 0.5rem;
+    font-weight: 500;
+    margin-top: 0.4rem;
+    font-size: x-large;
+}
+.wishlistItemRating{
+    text-align: left;
+    color: white;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+.wishlistItemDesc{
+    text-align: left;
+    color: white;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+.searchBar{
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.searchButton{
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: 1rem;
+}
+.updateHeading{
+    width: 100%;
+    user-select: none;
+    color: #fff;
+    text-align: center;
+}
+.errMsgDiv{
+    width: 100%;
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.feedbackMsg{
+    width: 100%;
+    border: 2px solid silver;
+    border-radius: 0.45rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.HomeImgDiv{
+    width: 100%;
+    height:25%;
+}
+.HomeImgDiv > img{
+    width: 100%;
+    height: 40rem;
+    opacity: 85%;
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.HomeImgDiv >p{
+    position: absolute;
+    top: 10rem;
+    left:4rem;
+    font-size: 4.7rem;
+    user-select: none;
+    font-style: italic;
+    font-weight: 700;
+}
+.width{
+    width: 1rem;
+    padding-left: 20rem;
+}
+
+.headingOrders{
+    font-family: 'Mukta',sans-serif;
+    font-size: xx-large;
+    margin-top: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.orderMain{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+.orderDescription{
+    margin-left: 5rem;
+    padding: 0.4rem;
+}
+.orderDescriptionItem{
+    font-family: 'Mukta',sans-serif;
+    font-size: 1.2rem;
+}
+.orderDescriptionItem-name{
+    font-size: x-large;
+}
+.orderUserDescription{
+    width: 25%;
+    margin-left: 2rem;
+}
+.btnDelete{
+    width: 3.1rem;
+}
+
+.footerButtons{
+    display: flex;
+    justify-content: space-between;
+}
+.nextOrders{
+    margin-right: 4rem;
+}
+.previousOrders{
+    margin-left: 4rem;
+}
+
+.noItemMsg{
+    font-size: x-large;
+    text-align: center;
+    color: aqua;
+}
+
+.quantityLabel{
+    color: white;
+}
+
+.quantityInput{
+    width: 20vh;
+}
+
+@media only screen and (max-width:860px) {
+    :root {
+        font-size: 1vh;
+    }
+}
+    
+@media only screen and (max-width:1380px) {
+    .maindiv {
+        display: flex;
+        flex-direction: column;
+        padding: 5vh;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+    }
+
+    .MainAboutDiv {
+        display: flex;
+        width: 80%;
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aboutInfoDiv {
+        width: fit-content;
+        text-align: justify;
+        text-justify: auto;
+        margin-top: 2rem;
+        margin-bottom: auto;
+        margin-right: auto;
+        margin-left: 3rem;
+    }
+}
