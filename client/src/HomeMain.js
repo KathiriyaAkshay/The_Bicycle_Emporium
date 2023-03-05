@@ -66,7 +66,7 @@ function HomeMain() {
               <p class="lead my-4 ">
                 Find your best Bicycle and take advantage of it.
               </p>
-              <Link to="/ViewAllScholarships">
+              <Link to="/ViewAllBicycles">
                 <button
                   class=" button2"
                   data-bs-toggle="modal"
@@ -83,17 +83,17 @@ function HomeMain() {
           </div>
         </div>
       </section>
-      {/* scholarship details filters */}
+      {/* Bicycle details filters */}
       <section class="bg-primary text-light p-5">
         <div class="container">
           <div class="d-md-flex justify-content-around align-items-center">
-            <h3 class="mb-3 mb-md-0 cc">Search Scholarship</h3>
+            <h3 class="mb-3 mb-md-0 cc">Search Bicycle</h3>
 
             <div class="input-group news-input">
               <input
                 type="text"
                 class="form-control"
-                placeholder="Scholarship Name"
+                placeholder="Bicycle Name"
                 
               />
               <button
@@ -142,7 +142,7 @@ function HomeMain() {
       </section>
 
       <section class="" id="services">
-        <h1 class="section-title text-center">All Scholarships</h1>
+        <h1 class="section-title text-center">All Bicycles</h1>
         <div class="container">
         {
           items.map((item, index) => {
@@ -157,7 +157,7 @@ function HomeMain() {
         </div>
         <div class="container ">
           <div className=" col-md-12 ml-0 ml-lg-3 my-2 my-lg-0 text-center">
-            <Link style={{ textDecoration: "none" }} to="/ViewAllScholarships">
+            <Link style={{ textDecoration: "none" }} to="/ViewAllBicycles">
               <a className=" button2 " href="#">
                 view more
               </a>
@@ -165,7 +165,7 @@ function HomeMain() {
           </div>
         </div>
       </section>
-      {/* scholarship card end  */}
+      {/* Bicycle card end  */}
 
       {/* Faq starts  */}
       
