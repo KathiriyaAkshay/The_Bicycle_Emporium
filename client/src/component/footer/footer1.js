@@ -39,7 +39,7 @@ function Footer() {
             <div>
               <i class="fa fa-envelope"></i>
               <p>
-                <a href="mailto:support@company.com">Scholar@gmail.com</a>
+                <a href="mailto:support@company.com">bicyclee@gmail.com</a>
               </p>
             </div>
           </div>
@@ -118,7 +118,7 @@ function Footer() {
                   </li>
                 </Link>
                 <br/>
-                <Link to="/About-Scholar">
+                <Link to="/About-bicyclee">
                   <li>
                     <a href="#" className="lear-more-l">
                       About Us
@@ -147,27 +147,27 @@ function Footer() {
                 }
               }}
             >
-              National Scholarships
+              National bicycleeships
             </h5>
             <ul style={width <= 987 ? ns : {}}>
               <li>
                 <a href="#" className="lear-more-l">
-                  State Scholarships
+                  State bicycleeships
                 </a>
               </li>
               <li>
                 <a href="#" className="lear-more-l">
-                  Central Scholarships
+                  Central bicycleeships
                 </a>
               </li>
               <li>
                 <a href="#" className="lear-more-l">
-                  Private Scholarship
+                  Private bicycleeship
                 </a>
               </li>
               <li>
                 <a href="#" className="lear-more-l">
-                  Compititive Exam <br /> based Scholarships
+                   Exam <br /> based bicycleeships
                 </a>
               </li>
             </ul>
@@ -184,41 +184,41 @@ function Footer() {
                   }
                 }}
               >
-              international Scholarships
+              international bicycleeships
               </h5>
               <ul style={width <= 987 ? is : {}}>
                 <Link to="/study-at-germany">
                   <li>
                     <a href="#" className="lear-more-l">
-                      Study at germany
+                      Bicycle of germany
                     </a>
                   </li>
                 </Link>
                 <Link to="/study-at-us">
                   <li>
                     <a href="#" className="lear-more-l">
-                      Study at United State
+                      Bicycle of United State
                     </a>
                   </li>
                 </Link>
                 <Link to="/study-at-ukrain">
                   <li>
                     <a href="#" className="lear-more-l">
-                      Study at Ukraine
+                      Bicycle of Ukraine
                     </a>
                   </li>
                 </Link>
                 <Link to="/study-at-canada">
                   <li>
                     <a href="#" className="lear-more-l">
-                      Study at Canada
+                      Bicycle of Canada
                     </a>
                   </li>
                 </Link>
                 <Link to="/study-at-rusia">
                   <li>
                     <a href="#" className="lear-more-l">
-                      Study at Rusia
+                      Bicycle of Rusia
                     </a>
                   </li>
                 </Link>
@@ -237,32 +237,32 @@ function Footer() {
                   }
                 }}
               >
-                Research Fellowships
+                Company1
               </h5>
               <ul style={width <= 987 ? rs : {}}>
                 <li>
                   <a href="#" className="lear-more-l">
-                    PMRF Fellowship
+                    Company2
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    TARE Fellowship
+                    TCompnay3
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    JNFF Fellowship
+                    Company4
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    Google Phd Fellowship
+                    Company5
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    ICMR Fellowship
+                    Compnay6
                   </a>
                 </li>
               </ul>
@@ -327,7 +327,7 @@ function Footer() {
             <span>
               © 2022
               <a href="#" target="_new">
-                Scholar
+                bicyclee
               </a>
               All rights reserved.
             </span>
