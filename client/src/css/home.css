@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* body::before{
+    display: block;
+    content: '';
+    height: 60px;
+} */
+.left h1{
+    font-size: calc(1.375rem + 1.5vw) !important;
+}
+#services{
+  padding-top: 20px;
+}
+#services .container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#services .container .cardmain{
+    margin: 9px;
+}
+#map{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#home{
+    background-color: white;
+}
+.head .left{
+  width: 55%;
+}
+.head .right{
+    width: 40%;
+}
+#home{
+    background-color: rgb(232 239 243) !important;
+}
+ 
+.left p{
+    color: black;
+    font-weight: 600;
+}
+.left h1{
+    font-weight: 700;
+}
+.header{
+    background-color: white;
+}
+
+.filter{
+    display: flex; 
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-top: 7px;
+}
+.filter select{
+    margin: 7px;
+}
+.filter select,.filter button{
+    width: 116px;
+    height: 38px;
+    border: 2px solid rgb(209, 203, 203);
+    font-size: 20px;
+     margin: 7px;
+   border-radius: 7px;
+   width: 20%;
+   height: 50px;
+text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.filter :hover{
+    cursor: pointer;
+}
+ 
+.filter select option:hover{
+    cursor: pointer;
+}
+.filter select option{
+    margin: 12px;
+    padding: 4px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.left h1 span{
+    color: rgb(220, 135, 7) !important;
+}
+select{
+    color:  black !important;
+    font-weight: 500;
+}
+#about{
+    margin-top: 17px;
+    margin-bottom: 23px;
+}
+
+/* .viewby{
+    display: flex; 
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-top: 7px;
+}
+
+.viewby select,.viewby button{
+    width: 116px;
+    height: 38px;
+    border: 2px solid rgb(209, 203, 203);
+    font-size: 20px;
+     margin: 7px;
+   border-radius: 7px;
+   width: 20%;
+   height: 50px;
+text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+} */
+/* #services h2,
+#about h2{
+    background-color: rgb(188, 244, 225);
+    text-align: center;
+    height: auto; 
+    padding: 14px;
+} */
+.faq{
+    margin: 56px ;
+    margin-top: 33px;
+}
+@media (max-width:926px) {
+    .cc{
+        text-align: center;
+    }
+  
+   .filter{
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+   .filter select{
+    margin-top: 13px;
+    width: 50%;
+   }
+   
+}
+
+
+@media (max-width:791px) {
+    .head .left{
+        width: 100%;
+    }
+  
+    .head{
+        justify-content: center;
+    }
+}
+@media(min-width: 768px) {
+    .news-input{
+        width: 50%;
+    }
+}
+
+
+@media (max-width:430px) {
+    .cardmain{
+        width: 90%;
+    }
+    .filter select{
+        width: 85%;
+    }
+}
+
+
+/* new  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+ 
+#services{
+  padding-top: 20px;
+}
+#home{
+    padding: 56px;
+}
+.ss{
+    font-size:calc(1.1rem + .6vw) !important; 
+    font-weight: 500 !important;
+}
+#about h2{
+    font-size: calc(1.325rem + .9vw) !important;
+}
+.faq {
+    margin: 0px !important;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+/* .faq .dddd div{
+    display: block !important;
+} */
+@media (max-width:400px) {
+    #services h2,
+    #about h2{
+        font-size: 1.5rem!important;
+        font-weight: 500!important;
+    }
+}
+.btn-dark{
+    color: #fff !important;
+    background-color: #212529 !important;
+    border-color: #212529 !important;
+}
+#services h2{
+    font-size: 2rem !important;
+    font-weight: 500 !important; 
+}
+@media (max-width:546px) {
+    .filter button{
+        width: 71% !important;
+    }
+}
+#services .container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#services .container .cardmain{
+    margin: 9px;
+    position: relative;
+}
+.applyfilt{
+ width: 134px !important;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#home{
+    background-color: white;
+}
+.head .left{
+  width: 55%;
+}
+.head .right{
+    width: 40%;
+}
+#home{
+    background-color: rgb(232 239 243) !important;
+}
+ 
+.left p{
+    color: black;
+    font-weight: 600;
+}
+.left h1{
+    font-weight: 700;
+}
+.header{
+    background-color: white;
+}
+
+.filter{
+    display: flex; 
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-top: 7px;
+}
+.filter select{
+    margin: 7px;
+}
+.filter select{
+    width: 116px;
+    height: 38px;
+    border: 2px solid rgb(209, 203, 203);
+    font-size: 20px;
+     margin: 7px;
+   border-radius: 7px;
+   width: 20%;
+   height: 50px;
+text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.filter :hover{
+    cursor: pointer;
+}
+ 
+.filter select option:hover{
+    cursor: pointer;
+}
+.filter select option{
+    margin: 12px;
+    padding: 4px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.left h1 span{
+    color: rgb(220, 135, 7) !important;
+}
+select{
+    color:  black !important;
+    font-weight: 500;
+}
+.faq{
+    /* margin: 33px 56px 56px !important; */
+}
+#about{
+    margin-top: 17px;
+    margin-bottom: 23px;
+}
+.head{
+    display: flex ;
+}
+#services h2,
+#about h2{
+    /* background-color: rgb(188, 244, 225); */
+    text-align: center;
+    height: auto; 
+    padding: 14px;
+}
+.faq{
+    margin: 56px ;
+    margin-top: 33px;
+}
+.container {
+    max-width: 1240px !important;
+}
+.mobile{
+    display: none;
+}
+@media (min-width:1236px) {
+    .faq{
+        /* margin: 33px 56px 56px !important;  */
+            margin-left: auto !important;
+    margin-right: auto !important;
+    }
+}
+@media (max-width:926px) {
+    .cc{
+        text-align: center;
+    }
+  
+   .filter{
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+   .filter select{
+    margin-top: 13px;
+    width: 50%;
+   }
+   
+}
+
+@media (max-width:814px) {
+    .head{
+        justify-content: center !important;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+    }
+    .head a{
+        width: 90% !important;
+        height: 100%;
+    }
+}
+
+
+@media (max-width:791px) {
+    .head .left{
+        width: 100%;
+    }
+    .head .right{
+         /* display: none; */
+    }
+    .head{
+        justify-content: center;
+    }
+}
+@media(min-width: 768px) {
+    .news-input{
+        width: 50%;
+    }
+}
+
+@media (max-width:575px) {
+     .mobile{
+         display: block;
+     }
+     .mobile img{
+         width: 100%;
+         height: 123px;
+     }
+     .head a{
+        width: 100% !important;
+        height: 100% !important;
+     }
+     .head a img{
+         display: block !important;
+     }
+     #home{
+        padding: 14px !important;
+        padding-top: 53px !important;
+     }
+    }
+     
+@media (max-width:430px) {
+    .cardmain{
+        width: 90%;
+    }
+    .filter select{
+        width: 85%;
+    }
+}
