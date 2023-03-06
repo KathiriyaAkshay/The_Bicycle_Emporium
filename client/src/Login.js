@@ -4,6 +4,10 @@ import "./css/main.css"
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
 import LockIcon from '@mui/icons-material/Lock';
 import EmailIcon from '@mui/icons-material/Email';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+import jwt_decode from 'jwt-decode'
+
 const Login = () => {
   const navigate = useNavigate();
   function setCookie(name, value, days) {
@@ -68,6 +72,34 @@ const Login = () => {
 
   }
 
+  const submitGFunction = async (details)=>{
+    const requrl = "http://localhost:5000/user/verifyUser";
+    const reqOptions = {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ "email": details.email, "password": 'google123', "name": details.name })
+    }
+    const result = await fetch(requrl, reqOptions);
+    const response = await result.json();
+    if (response.status === "success") {
+
+      setCookie("jwtoken", response.token, 0.5)
+      alert("User Login Successfully!!!")
+      navigate('/')
+      window.location.reload(false);
+    }
+    else if (response.status === "failed") {
+      alert("Invalid Credentials !!!")
+      document.getElementById("password").focus();
+
+    }
+    else if (response.status === "NotFound") {
+      alert("User Not Found with the Email id!!!")
+      navigate("/register")
+    }
+  }
+  
+
   const showPass = () => {
     const password = document.getElementById('password')
     const checkbox = document.getElementById('show')
@@ -78,7 +110,7 @@ const Login = () => {
   }
   return (
     <>
-    
+
       <div className="Login_division">
         <div className='formdiv'>
           <div className='Form_title'>Login </div>
@@ -123,6 +155,24 @@ const Login = () => {
             <div className='inputDivs'>
               <input className='SubmitButtonCss' type="button" value="Submit" onClick={submitFun} />
             </div>
+
+
+
+            <GoogleOAuthProvider clientId="996507416949-h17vfj5ig72jgkhvqqcv6a1e1mt5sq4v.apps.googleusercontent.com">
+
+
+              <GoogleLogin
+                onSuccess={credentialResponse => {
+                  const details = jwt_decode(credentialResponse.credential);
+                  console.log(credentialResponse);
+                  console.log(details);
+                  submitGFunction(details);
+                }}
+                onError={() => {
+                  console.log('Login Failed');
+                }}
+              />
+            </GoogleOAuthProvider>
 
             <br /><br />
             <a className='Anchor_tag' href="/register">Don't have an account? Register here!</a><br />

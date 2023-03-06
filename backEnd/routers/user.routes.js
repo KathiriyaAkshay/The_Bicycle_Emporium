@@ -19,9 +19,10 @@ app.get("/", (req, res) => {
     // res.send("Hello  "+req.userName)
 })
 app.post("/createUser", async (req, res) => {
+    console.log(req.body.name);
+    console.log(req.body.email)
     const name = req.body.name
     const email = req.body.email
-    const phone = req.body.phone
     const password = req.body.password
     const tempUser = await User.findOne({ email: email })
     if (tempUser) {
@@ -29,7 +30,7 @@ app.post("/createUser", async (req, res) => {
 
     }
     else {
-        const newUser = new User({ name, email, phone, password })
+        const newUser = new User({ name, email, password })
         const token = await newUser.generateAuthToken();
         res.json({ "status": "success", "token": token });
     }

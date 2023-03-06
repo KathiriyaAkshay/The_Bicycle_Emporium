@@ -5,6 +5,9 @@ import LockIcon from '@mui/icons-material/Lock';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useNavigate } from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+import jwt_decode from 'jwt-decode'
 
 const Register = () => {
   var navigate = useNavigate()
@@ -40,6 +43,7 @@ const Register = () => {
         cpassword.type = "password"
     }
   }
+
   const sendOtp = async () => {
     const email = document.getElementById('email').value
     const requrl = "http://localhost:5000/user/verifyEmail";
@@ -104,6 +108,30 @@ const Register = () => {
       alert("Email verification failed!!!Otp is wrong...")
     }
   }
+
+  const registerGFunction = async (details)=>{
+    console.log(details.name);
+    console.log(details.email);
+    const reqUrl = "http://localhost:5000/user/createUser";
+        const reqOptions = {
+          method: "POST",
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ "name": details.name, "email": details.email, "password": "google123" })
+        }
+        const result = await fetch(reqUrl, reqOptions);
+        const response = await result.json();
+        if (response.status === 'success') {
+          setCookie("jwtoken", response.token, 0.5)
+          alert("User Signed in Successfully!!!")
+          navigate('/')
+          window.location.reload(false);
+        }
+        else if (response.status === 'failed') {
+          alert("Account already exists!!!")
+          navigate('/login')
+        }
+  }
+
   return (
     <>
       <div className='Reg_formdiv'>
@@ -137,6 +165,22 @@ const Register = () => {
         <div className='SubmitDiv' style={{ display: divs }}>
           <input type="submit" value="Submit" className='regSubmitButtonCss' onClick={sendOtp} />
         </div>
+        <hr/>
+        <GoogleOAuthProvider clientId="996507416949-h17vfj5ig72jgkhvqqcv6a1e1mt5sq4v.apps.googleusercontent.com">
+
+
+              <GoogleLogin
+                onSuccess={credentialResponse => {
+                  const details = jwt_decode(credentialResponse.credential);
+                  console.log(credentialResponse);
+                  console.log(details);
+                  registerGFunction(details);
+                }}
+                onError={() => {
+                  console.log('Login Failed');
+                }}
+              />
+            </GoogleOAuthProvider>
         <a style={{ display: divs }} className='Anchor_tag' href="/login">Already have an account? Login here!</a><br />
 
         <div className='inputDivs' style={{ display: showOtpBlock }}>
