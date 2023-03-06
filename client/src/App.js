@@ -62,7 +62,7 @@ function App() {
           <Route exact path="/" element={<HomeMain />} />
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
-          <Route excat path="/categories" element={<HomeMain />} />
+          <Route excat path="/categories" element={<Categories />} />
           <Route excat path="/about" element={<HomeMain />} />
           <Route exact path="/contact" element={<HomeMain />} />
           <Route exact path="/logout" element={<Logout />} />

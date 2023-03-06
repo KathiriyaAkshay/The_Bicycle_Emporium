@@ -15,13 +15,13 @@ const CycleCard = (props) => {
         <>
             <img className="card-img-top SubCardDiv-img" src={props.imagename} alt="Card image photo" />
             <div className="card-body CardBody">
-                <h5 className="card-title">Name: {props.name}</h5>
-                <p className="card-text">Price: ₹{props.price}</p>
-                <p>Ratings: {rating(props.rating)} ({props.rating} stars)</p>
+                <h5 className="card-title" style={{color:"black"}}>Name: {props.name}</h5>
+                <p className="card-text" style={{color:"black"}}>Price: ₹{props.price}</p>
+                <p style={{color:"black"}}>Ratings: {rating(props.rating)} ({props.rating} stars)</p>
                 {
                     props.buttonStatus
                     ?<button className="btn btn-secondary">Show more</button>
-                    :<button className="btn btn-light">Show more</button>
+                    :<button  className="btn btn-light">Show more</button>
                 }
             </div>
         </>

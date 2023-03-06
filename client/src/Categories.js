@@ -30,6 +30,11 @@ const Categories = () => {
     }
     return (
         <>
+        <section
+        class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+        id="home"
+      >  
+       
             <div className="categoriesButtonDiv">
                 <a className='categoryLinks' style={{ gridColumnStart: 1 }}><button type="button" id="cycle_3tyre" className="btn"  onClick={getData}>3-tyre/with support wheel cycle</button></a>
                 <a className='categoryLinks' style={{ gridColumnStart: 2 }}><button type="button" id="cycle_small" className="btn"  onClick={getData}>Small cycles</button></a>
@@ -45,6 +50,9 @@ const Categories = () => {
                 }
 
             </div>
+          
+      
+            </section>
         </>
     )
 }
