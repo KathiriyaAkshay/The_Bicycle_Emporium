@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
         <div className='FooterDiv'>
-            <p>This is the copyright Wesibe for @RKCYCLES aka RK and Sons Cycle group.</p>
+            <p>This is the copyright Wesibe for @.</p>
         </div>
     </footer>
   )

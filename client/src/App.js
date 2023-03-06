@@ -39,11 +39,11 @@ function App() {
        <AdminHeader/>
         <Routes>
           <Route exact path='/admin/Home' element={<AddCycle2 />} />
-          <Route exact path='/admin/updateCycle' element={<UpdateCycle />} />
-          <Route exact path='/admin/feedbacks' element={<ShowFeedback />} />
-          <Route exact path="/admin/removeitem" element={<RemoveItem />} />
-          <Route exact path="/admin/liveOrders" element={<LiveOrders />} />
-          <Route exact path="/admin/deliveredOrders" element={<DeliveredOrder />} />
+          <Route exact path='/admin/updateCycle' element={<AddCycle2 />} />
+          <Route exact path='/admin/feedbacks' element={<AddCycle2 />} />
+          <Route exact path="/admin/removeitem" element={<AddCycle2 />} />
+          <Route exact path="/admin/liveOrders" element={<AddCycle2 />} />
+          <Route exact path="/admin/deliveredOrders" element={<AddCycle2 />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/logoutAdmin" element={<LogOutAdmin/>} />
           
@@ -62,17 +62,17 @@ function App() {
           <Route exact path="/" element={<HomeMain />} />
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
-          <Route excat path="/categories" element={<Categories />} />
-          <Route excat path="/about" element={<About />} />
-          <Route exact path="/contact" element={<Contact />} />
+          <Route excat path="/categories" element={<HomeMain />} />
+          <Route excat path="/about" element={<HomeMain />} />
+          <Route exact path="/contact" element={<HomeMain />} />
           <Route exact path="/logout" element={<Logout />} />
-          <Route exact path="/showItem" element={<ShowItem />} />
-          <Route exact path="/wishlist" element={<Wishlist />} />
-          <Route exact path="/showOrders" element={<ShowOrders />} />
-          <Route exact path="/previousOrders" element={<PreviousOrders />} />
+          <Route exact path="/showItem" element={<HomeMain />} />
+          <Route exact path="/wishlist" element={<HomeMain />} />
+          <Route exact path="/showOrders" element={<HomeMain />} />
+          <Route exact path="/previousOrders" element={<HomeMain />} />
           <Route exact path="/forgotPassword" element={<ForgotPassword />} />
           <Route exact path="/sdff" element={<HomeMain/>} />
-          <Route exact path="/payment" render={()=>{window.location.href="payment.html"}} />          
+              
           <Route path='*' element={<ErrorPage />} />
         </Routes>
       </>);
