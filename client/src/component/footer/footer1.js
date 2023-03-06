@@ -312,18 +312,6 @@ function Footer() {
           </div>
           <div className="col-md-12 col-sm-12 col-xs-12 copy-right text-center">
           <p>
-            <a
-              href="https://www.dmca.com/Protection/Status.aspx?ID=b77fb9ca-2075-44ae-9d84-a87cbe917c18&amp;refurl=#9"
-              title="DMCA.com Protection Status"
-              className="dmca-badge"
-            >
-              <img
-                src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-03.png?ID=b77fb9ca-2075-44ae-9d84-a87cbe917c18"
-                alt="DMCA.com Protection Status"
-                width="100"
-                height="20"
-              />
-            </a>
             <span>
               © 2022
               <a href="#" target="_new">

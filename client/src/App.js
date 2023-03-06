@@ -11,7 +11,7 @@ import Login from "./Login"
 import Register from "./Register"
 import AddCycle from "./admin/AddCycle"
 import ErrorPage from "./ErrorPage"
-import Footer from "./Footer";
+import Footer from "../src/component/footer/footer1";
 import ShowItem from "./component/ShowItem";
 import Wishlist from "./Wishlist";
 import UpdateCycle from "./admin/UpdateCycle";
@@ -49,7 +49,7 @@ function App() {
           
           <Route exact path="/" element={<LogOutAdmin/>} />
          
-          <Route exact path="/sdff" element={<HomeMain/>} />
+          
         </Routes>
       </>
     )
@@ -75,7 +75,6 @@ function App() {
           <Route exact path="/payment" render={()=>{window.location.href="payment.html"}} />          
           <Route path='*' element={<ErrorPage />} />
         </Routes>
-        <Footer />
       </>);
   }
 }
