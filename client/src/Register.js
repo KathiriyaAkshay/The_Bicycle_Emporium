@@ -63,13 +63,13 @@ const Register = () => {
   const registerFunction = async () => {
     const name = document.getElementById("name").value
     const email = document.getElementById("email").value
-    const phone = document.getElementById("phone").value
+    
     const password = document.getElementById("password").value
     const cpassword = document.getElementById("cpassword").value
     const userOtp = document.getElementById("otp").value
 
     if (otp == userOtp) {
-      if (name === '' || email === '' || phone === '' || password === '' || cpassword === '') {
+      if (name === '' || email === ''  || password === '' || cpassword === '') {
         alert("Enter details properly!!!")
         document.getElementById("name").focus();
       }
@@ -84,7 +84,7 @@ const Register = () => {
         const reqOptions = {
           method: "POST",
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ "name": name, "email": email, "phone": phone, "password": password })
+          body: JSON.stringify({ "name": name, "email": email, "password": password })
         }
         const result = await fetch(reqUrl, reqOptions);
         const response = await result.json();
@@ -121,18 +121,12 @@ const Register = () => {
           <label htmlFor="email" className='Label'>Email:</label><br />
           <input type="email" name="email" id="email" className='Input_take' required /><br /> <br />
         </div>
-        <div className='regInputDivs' style={{ display: divs }}>
-          <span className='icons'><LocalPhoneIcon /></span>
-          <label htmlFor="phone" className='Label'>Phone:</label><br />
-          <input type="text" name="phone" id="phone" className='Input_take' required /><br /> <br />
-        </div>
+        
         <div className='regInputDivs' style={{ display: divs }}>
           <span className='icons'><LockIcon /></span>
           <label htmlFor="password" className='Label'>Password:</label><br />
           <input type="password" name="password" id="password" className='Input_take' required /><br />
           <div className="ShowPassDivReg"><input type="checkbox" id='showpass' name='show' className='checkBox' onClick={() => showPass("password")} />    <label htmlFor="showpass" className='Label_ShowPass'> Show Password</label></div>
-
-          <br />
         </div>
         <div className='regInputDivs' style={{ display: divs }}>
           <span className='icons'><LockIcon /></span>

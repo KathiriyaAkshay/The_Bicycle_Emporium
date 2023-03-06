@@ -58,7 +58,7 @@ function HomeMain() {
           <div class="d-sm-flex align-items-center justify-content-between head">
             <div className="left">
               <h1>
-                <span class="text-warning">Welcome to Bicyclee !!</span>
+                <span class="text-warning">Welcome to The Bicycle Emporium !!</span>
               </h1>
               <p class="lead my-4 ">
               We are one of the biggest bicycle-families in the world. Our services include all types of repair, search of a perfect bike for every customer, sport events organization and much more. Join our community and become a part of the bike-family.
@@ -127,14 +127,12 @@ function HomeMain() {
             >
               <option selected>All</option>
               <option>2y old</option>
-              <option>0y old</option>
-              <option>7y old</option>
+              <option>8y old</option>
+              <option>18y old</option>
             </select>
             <button
               class="btn btn-dark btn-lg  applyfilt"
-              type="button"
-              
-            >
+              type="button"  >
               Apply
             </button>
           </div>

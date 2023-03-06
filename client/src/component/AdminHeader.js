@@ -22,7 +22,7 @@ function AdminHeader() {
             className="logo"
             src="https://www.sih.gov.in/img1/SIH2022-white-logo.png"/> */}
             <span><img src={require("./logo.jpg")} alt="logo" className='logo' /></span>
-                    <span>Bicyclee</span>
+                    <span style={{fontSize:'medium'}}>The Bicycle Emporium</span>
                   </a>
                 </Link>
 
@@ -45,12 +45,6 @@ function AdminHeader() {
               
                 >
                   <ul className="navbar-nav ml-auto">
-                    <li className="nav-item ">
-                      <NavLink className="nav-link" to="/">
-                        Home
-                      </NavLink>
-                    </li>
-
                     <li
                       className="nav-item dropdown"
                     >
