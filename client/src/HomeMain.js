@@ -61,7 +61,7 @@ function HomeMain() {
                 <span class="text-warning">Welcome to The Bicycle Emporium !!</span>
               </h1>
               <p class="lead my-4 ">
-              We are one of the biggest bicycle-families in the world. Our services include all types of repair, search of a perfect bike for every customer, sport events organization and much more. Join our community and become a part of the bike-family.
+              	Providing a convenient and efficient platform for customers within the local region to browse and purchase bicycles.
               </p>
               <p class="lead my-4 ">
                 Find your best Bicycle and take advantage of it.

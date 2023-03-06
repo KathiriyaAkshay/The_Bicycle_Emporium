@@ -116,7 +116,7 @@ app.post('/getDetails', async (req, res) => {
     const userDetails = jwt.verify(token, tokenKey)
 
     let cycle = await CycleItem.findOne({ _id: id })
-    res.json({ "amount": cycle.price, "username": userDetails.name, "email": userDetails.email, "contact": userDetails.phone })
+    res.json({ "amount": cycle.price, "username": userDetails.name, "email": userDetails.email })
     // console.log(data);
 })
 
