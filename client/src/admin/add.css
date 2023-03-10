@@ -293,3 +293,8 @@ mark {
         padding-top: calc(1.375rem + 1px);
 }
 
+
+.tempchanges{
+	display:flex;
+	justify-content: space-between;
+}
