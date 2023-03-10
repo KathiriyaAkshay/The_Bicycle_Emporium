@@ -158,7 +158,7 @@ const AddCycle2 = () => {
                 Category:
               </label>
               <div className="col-sm-10">
-            <select name="category" id="category" className=" form-select" style={{color:'black', width:'90%',marginLeft:'20px',paddingLeft: 8, paddingRight: 8 }}>
+            <select name="category" id="category" className=" form-select" style={{marginTop:'10px',color:'black', width:'90%',marginLeft:'20px',paddingLeft: 8, paddingRight: 8 }}>
               <option value="cycle_3tyre">3-tyre cycle</option>
               <option value="cycle_small">small-size cycle</option>
               <option value="cycle_medium">medium-size cycle</option>
@@ -219,12 +219,14 @@ const AddCycle2 = () => {
               </div>
             </div>
 
-            <div className="form-group row">
+            <div className="form-group row tempchanges" >
+            <div>
             <label htmlFor="avail" className='label' style={{color:'black', marginLeft: "0.5rem",  textAlign: 'left'}}>Show in Homepage.</label>
-         
+            </div>
+            <div>
             <input type="checkbox" name="avail" id="avail"
                 />
-              
+                </div>
             </div>  
 
            

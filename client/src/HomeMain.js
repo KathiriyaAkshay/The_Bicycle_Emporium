@@ -30,6 +30,88 @@ function HomeMain() {
     checkStatus()
   }
 
+   
+  const [searchinput, searchinputUpdate] = useState("");
+
+  const filter2 = () => {
+    let temp = [...items];
+
+    if (searchinput != "") {
+      temp = temp.filter((ele) => {
+        return ele.name.toLowerCase().includes(searchinput.toLowerCase());
+      });
+    }
+
+  // if (tagList != "" && tag != "") {
+  //     temp = temp.filter((ele) => {
+  //       return ele.Tags.includes(tag);
+  //     });
+  //   }
+
+  //   if (tagList != "" && lang != "") {
+    
+  //     temp = temp.filter((ele) => {
+  //       return ele.Tags.includes(lang);
+  //     });
+  //   }
+
+  //   if (tagList != "" && timeframe != "") {
+     
+  //     temp = temp.filter((ele) => {
+  //       console.log(ele.Date.getFullYear);
+  //       return ele.Date.getFullYear === timeframe;
+  //     });
+  //   }
+
+
+    console.log("---r---");
+    console.log(temp);
+    setitems(temp);
+
+    // sessionStorage.setItem('searchinput', searchinput);
+    // setFlag("true");
+  };
+
+  const [option,setOption] = useState()
+  const [rating,setRating] = useState()
+  const [type,setType] = useState()
+
+function handleChange(event){
+    setOption(event.target.value)
+}
+function handleChange2(event){
+  setRating(event.target.value)
+}
+function handleChange3(event){
+  setType(event.target.value)
+}
+const filterfun = () =>{
+  let temp = [...items];
+
+  if (option != "") {
+       temp = temp.filter((ele) => {
+        return ele.category.includes(option);
+       });
+      }
+
+      if (rating != "") {
+        temp = temp.filter((ele) => {
+         return ele.rating.includes(rating);
+        });
+       }
+console.log(type);
+       if (type != "") {
+        temp = temp.filter((ele) => {
+          console.log("i'm insidee")
+          return ele.homeAvailability.type;
+        });
+      }
+      console.log("hey i'm outside'");
+      
+      console.log(temp);
+      setitems(temp);
+}
+
   useEffect(() => {
     auth();
     async function getFunction() {
@@ -94,12 +176,13 @@ function HomeMain() {
                 type="text"
                 class="form-control"
                 placeholder="Bicycle Name"
-                
+                value={searchinput}
+                onChange={(e) => searchinputUpdate(e.target.value)}
               />
               <button
                 class="btn btn-dark btn-lg"
                 type="button"
-                
+                onClick={filter2}
               >
                 Search
               </button>
@@ -110,29 +193,32 @@ function HomeMain() {
               <h3>Filter : </h3>
             </div>
             <select
-              
+            onChange={handleChange}
             >
-              <option>Without Gear</option>
-              <option selected>Geared</option>
+              <option value="cycle_3tyre">cycle_3tyre</option>
+              <option value="cycle_small" selected>small-size cycle</option>
+              <option value="cycle_medium">medium-size cycle</option>
+              <option value="cycle_large" selected>large-size cycle</option>
             </select>
             <select
-              
+            onChange={handleChange2}
             >
-              <option>For-Child</option>
-              <option selected>For-Men</option>
-              <option selected>For-Women</option>
+              <option value="3" selected>Rating Above 3</option>
+              <option value="4">Rating Above 4</option>
+              <option value="5">Rating Above 5</option>
             </select>
             <select
-             
+            onChange={handleChange3}
             >
-              <option selected>All</option>
-              <option>2y old</option>
-              <option>8y old</option>
-              <option>18y old</option>
+              <option value="" >Home Availability</option>
+              <option value="true">YES</option>
+              <option value="false">NO</option>
             </select>
             <button
               class="btn btn-dark btn-lg  applyfilt"
-              type="button"  >
+              type="button"  
+              onClick={filterfun}
+              >
               Apply
             </button>
           </div>
