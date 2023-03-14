@@ -56,7 +56,21 @@ const RemoveItem = () => {
     }
     return (
         <>
-            <div className='Form_title updateHeading'>Remove Cycle Permanently</div>
+        <section
+        class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+        id="home"
+        style={{height:'600px'}}
+      >
+      <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="section-title mb-40">
+                <span class="text-marked">Remove</span> <span style={{color:'black'}}>Cycles Permanently</span>
+              </h2>
+            </div>
+          </div>
+         </div>
+
             <div style={{ display: "flex", marginBottom: "2rem" }}>
                 <select className="Input_take searchBar" id="searchName">
                     <option value='null'>--Search Cycle--</option>
@@ -68,7 +82,7 @@ const RemoveItem = () => {
                 </select>
                 <button className='btn btn-danger searchButton' onClick={deleteItem}>Delete</button>
             </div>
-
+</section>
         </>
     )
 }

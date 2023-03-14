@@ -39,9 +39,9 @@ function App() {
        <AdminHeader/>
         <Routes>
           <Route exact path='/admin/Home' element={<AddCycle2 />} />
-          <Route exact path='/admin/updateCycle' element={<AddCycle2 />} />
+          <Route exact path='/admin/updateCycle' element={<UpdateCycle />} />
           <Route exact path='/admin/feedbacks' element={<AddCycle2 />} />
-          <Route exact path="/admin/removeitem" element={<AddCycle2 />} />
+          <Route exact path="/admin/removeitem" element={<RemoveItem />} />
           <Route exact path="/admin/liveOrders" element={<AddCycle2 />} />
           <Route exact path="/admin/deliveredOrders" element={<AddCycle2 />} />
           <Route exact path="/login" element={<Login />} />
@@ -67,7 +67,7 @@ function App() {
           <Route exact path="/contact" element={<HomeMain />} />
           <Route exact path="/logout" element={<Logout />} />
           <Route exact path="/showItem" element={<HomeMain />} />
-          <Route exact path="/wishlist" element={<HomeMain />} />
+          <Route exact path="/wishlist" element={<Wishlist />} />
           <Route exact path="/showOrders" element={<HomeMain />} />
           <Route exact path="/previousOrders" element={<HomeMain />} />
           <Route exact path="/forgotPassword" element={<ForgotPassword />} />

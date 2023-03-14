@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import url from "../images/bicycle.png";
+import {
+    Button,
+    Grid,
+  } from '@mui/material';
 import Axios from 'axios'
 const UpdateCycle = () => {
 
@@ -174,7 +179,19 @@ const UpdateCycle = () => {
 
     return (
         <>
-            <div className='Form_title updateHeading'>Update Cycle</div>
+        <section
+        class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+        id="home"
+      >
+      <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="section-title mb-40">
+            <span class="text-marked">Update</span> <span style={{color:'black'}}>Products__</span>
+          </h2>
+        </div>
+      </div>
+     </div>
 
             {/* <div style={{ display: "flex" }}>
                 <input className="form-control me-2 Input_take searchBar" id='searchName' placeholder="Search By Name" required />
@@ -194,52 +211,161 @@ const UpdateCycle = () => {
 
             <div id='errMsgDiv' className='errMsgDiv' style={{ display: msgstatus }}>*Item Not Found!!!</div>
             
-            <div className='Reg_formdiv' style={{ display: status, paddingTop: "1rem" }}>
-                <div className='regInputDivs'>
-                    <img id='itemphoto' width='200px' height='200px' />
-                    <div className='Title_divs'>
-                        <label htmlFor='name' className='Label'>Name:</label> <br />
-                    </div>
-                    <input type="text" name="name" id="name" className='Input_take' required autoComplete='off' /><br /> <br />
+          
+            <div class="container headertop" style={{ display: status, paddingTop: "1rem" }}>
+            <div class="d-sm-flex align-items-center justify-content-between head">
+              <div className="left">
+                
+          
+          <div className="container " style={{ fontFamily: 'poppins', marginLeft: '30px' }}>
+          <div className=" p-3 ">
+          
+              <>
+              <form  >
+              <div className="form-group row">
+                <label
+                  for="name"
+                  style={{color:'black', textAlign: 'left', }}
+                  className="col-sm-2 col-form-label downn "
+                >
+                  Name:
+                </label>
+                <div className="col-sm-10">
+                  <input
+                  type="text" name="name" id="name"
+                    style={{color:'black', paddingLeft: 8, paddingRight: 8 }}
+                    className="form-control form-input"
+                    placeholder="Enter Your Full Name.."
+                    required
+                  />
                 </div>
-                <div className='regInputDivs'>
-                    <label htmlFor="price" className='Label'>Price:</label><br />
-                    <input type="number" name="price" id="price" className='Input_take' required /><br /> <br />
+              </div>
+      
+              <div className="form-group row">
+                <label
+                  for="price"
+                  style={{color:'black', textAlign: 'left', }}
+                  className="col-sm-2 col-form-label downn "
+                >
+                  Price:
+                </label>
+                <div className="col-sm-10">
+                  <input
+                    style={{color:'black', paddingLeft: 8, paddingRight: 8 }}
+                    type="number"
+                    className="form-control form-input"
+                    name="price" 
+                    id="price"
+                    placeholder="Enter Your bicycle price"
+                    required
+                  />
                 </div>
-                <div className='regInputDivs'>
-                    <label htmlFor="category" className='Label' style={{ marginRight: '10px' }}>Category:</label>
-                    <select name="category" id="category">
-                        <option value="cycle_3tyre">3-tyre cycle</option>
-                        <option value="cycle_small">small-size cycle</option>
-                        <option value="cycle_medium">medium-size cycle</option>
-                        <option value="cycle_large">large-size cycle</option>
-                    </select>
-                    <br /> <br />
-                </div>
-                <div className='regInputDivs'>
-                    <label htmlFor="desc" className='Label'>Description:</label><br />
-                    <textarea name="desc" id="desc" cols="30" rows="5" className='Input_take' required ></textarea>
-                    <br /> <br />
-                </div>
-
-                <div className='regInputDivs'>
-                    <label htmlFor="quantity" className='Label'>Enter Quantity:</label><br />
-                    <input type="number" name="quantity" id="quantity" className='Input_take' required /><br /> <br />
-                </div>
-                <div className='regInputDivs'>
-                    <label htmlFor="photo" className='Label'>Add Photo:</label><br />
-                    <input type="file" name="photo" id="photo" className='Input_take' onChange={(e) => { setPhoto(e.target.files[0]) }} /><br /> <br />
-                </div>
-
-                <div className='regInputDivs'>
-                    <input type="checkbox" name="avail" id="avail" />
-                    <label htmlFor="avail" className='label' style={{ marginLeft: "0.5rem" }}>Show in Homepage.</label>
-                </div>
-                <div className='SubmitDiv'>
-                    <input type="submit" value="Submit" className='regSubmitButtonCss' onClick={SubmitFunction} />
-                </div>
-                <br />
+              </div>
+      
+              <div className="form-group row">
+              <label
+                  for="category"
+                  style={{ color:'black', textAlign: 'left', }}
+                  className="col-sm-2 col-form-label downn "
+                >
+                  Category:
+                </label>
+                <div className="col-sm-10">
+              <select name="category" id="category" className=" form-select" style={{marginTop:'10px',color:'black', width:'90%',marginLeft:'20px',paddingLeft: 8, paddingRight: 8 }}>
+                <option value="cycle_3tyre">3-tyre cycle</option>
+                <option value="cycle_small">small-size cycle</option>
+                <option value="cycle_medium">medium-size cycle</option>
+                <option value="cycle_large">large-size cycle</option>
+              </select>
+              </div>
             </div>
+  
+              <div className="form-group row" style={{color:'black', marginTop: -10 }}>
+                <label style={{ textAlign: 'left'}} for="desc" className="col-sm-2 downn col-form-label">
+                  Description
+                </label>
+              <div className="col-sm-10">
+                  <textarea className="form-control f-textarea"
+                    placeholder="Description"
+                    rows="3"
+                    name="desc"
+                    id="desc" 
+                    style={{color:'black', paddingLeft: 8, paddingRight: 8 }}
+                    required></textarea>
+                </div>
+              </div>
+      
+              <div className="form-group row">
+                <label
+                  for="quantity"
+                  style={{color:'black',textAlign: 'left', }}
+                  className="col-sm-2 col-form-label downn "
+                >
+                  quantity:
+                </label>
+                <div className="col-sm-10">
+                  <input
+                    style={{color:'black', paddingLeft: 8, paddingRight: 8 }}
+                    className="form-control form-input"
+                    placeholder="Enter Your bicycle quantity"
+                    required
+                    type="number"
+                    name="quantity"
+                    id="quantity"
+                  />
+                </div>
+              </div>   
+              
+              <div className="form-group row">
+                <label
+                  for="name"
+                  style={{color:'black',textAlign: 'left', }}
+                  className="col-sm-2 col-form-label downn "
+                >
+                  Add Photo:
+                </label>
+                <div className="col-sm-10">
+                  <input type="file" name="photo" id="photo"  style={{ paddingLeft: 8, paddingRight: 8 }} 
+                  onChange={(e) => { setPhoto(e.target.files[0]) }} 
+                  className="form-control form-input"  placeholder="Enter Photo"
+                  />
+                </div>
+              </div>
+  
+              <div className="form-group row tempchanges" >
+              <div>
+              <label htmlFor="avail" className='label' style={{color:'black', marginLeft: "0.5rem",  textAlign: 'left'}}>Show in Homepage.</label>
+              </div>
+              <div>
+              <input type="checkbox" name="avail" id="avail"
+                  />
+                  </div>
+              </div>  
+  
+             
+              <div className="justify-content align-center  mt-3 ">
+                <div className="w-100" style={{ textAlign: 'center' }}>
+                  <Button variant="contained" style={{ height: "41px", boxShadow: "2px -1px 32px 0px rgba(44,94,255,0.36)" }} onClick={SubmitFunction} className=" search-bar-button  m-auto ">
+                  Update Your Product
+                </Button>
+                </div>
+              </div>
+            </form>
+          </>       
+  
+          </div>
+             
+             
+            
+          </div>
+              </div>
+  
+              <a href="https://svgshare.com/s/gH0"  className="right" style={{width:'50%'}}>
+                <img class="img-fluid  d-none d-sm-block" src={url}   title="" />
+              </a>
+            </div>
+          </div>
+          </section>
         </>
     )
 }
