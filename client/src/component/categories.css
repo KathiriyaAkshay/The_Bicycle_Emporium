@@ -1,0 +1,162 @@
+
+
+
+.categories .products{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 7rem 4rem;
+    padding-top: 4rem; */
+    width: 25%;
+}
+
+.categories .product{
+    border-radius: 2.5rem;
+    border: 1px solid rgba(144,144,144,0.25);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.categories .product .top{
+    background-color: #b6afaf;
+    height: 30rem;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.categories .product .top img{
+    height: 23rem;
+}
+
+.categories .product .top .icon{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #ff5e3a;
+    color: white;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    justify-content: center;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.categories .product .bottom{
+    padding: 2.5rem 2rem;
+    background-color: white;
+}
+
+.categories .product .bottom h4{
+    font-size: 1.7rem;
+    height: 5rem;
+    transition: 0.3s;
+}
+
+.categories .product .bottom .d-flex{
+    justify-content: space-between;
+}
+
+.categories .product .bottom .d-flex:first-child{
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.categories .product .bottom .cart-btn{
+    color: white;
+    background-color: #ff5e3a;
+    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.categories .product .bottom .price{
+    color: #909090;
+    font-weight: 500;
+
+}
+
+.categories .product .bottom .rating{
+    color: #ff5e3a;
+}
+
+.categories .product .bottom .rating i:not(:last-child)
+{
+    margin-right: 0.3rem;
+}
+
+.categories .product:hover{
+    border: none;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.categories .product:hover .top{
+    background: linear-gradient(to bottom, #fccb90, #ff9a9e);
+}
+
+.categories .product:hover .top .icon{
+    opacity: 1;
+    visibility: visible;
+}
+
+.categories .product:hover .cart-btn{
+    opacity: 1;
+    visibility: visible;
+}
+
+.categories .button {
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.categories .button .btn{
+    display: inline-block;
+    padding: 1.5rem 6rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    background: linear-gradient(to bottom, #ff5151, #ff5e3a);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.aa{
+    margin-top: 34px;
+}
+
+.temp{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+ @media (max-width:1152px) {
+    .products
+    {
+        width:33% !important;
+    }
+ }
+
+
+ @media (max-width:768px) {
+    .products
+    {
+        width:50% !important;
+    }
+ }
+ @media (max-width:556px) {
+    .products
+    {
+        width:100% !important;
+    }
+ }

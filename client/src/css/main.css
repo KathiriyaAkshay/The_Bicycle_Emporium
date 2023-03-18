@@ -378,12 +378,13 @@ body {
 }
 .SubCardDiv {
     width: 25rem;
+    background-color: #f6f7fd;
     grid-template-columns: auto auto;
     height: max-content;
-    border: 2px solid rgb(225, 221, 221);
+    /* border: 2px solid rgb(225, 221, 221); */
     border-radius: 0.35rem;
     padding: 0.4rem;
-    margin-right: 4rem;
+    margin-right: 1rem;
     margin-bottom: 7rem;
 }
 
