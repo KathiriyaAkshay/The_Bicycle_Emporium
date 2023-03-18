@@ -20,8 +20,8 @@ const CycleCard = (props) => {
                 <p style={{color:"black"}}>Ratings: {rating(props.rating)} ({props.rating} stars)</p>
                 {
                     props.buttonStatus
-                    ?<button className="btn btn-secondary">Show more</button>
-                    :<button  className="btn btn-light">Show more</button>
+                    ?<button className="button2">Show more</button>
+                    :<button  className="button2">Show more</button>
                 }
             </div>
         </>
