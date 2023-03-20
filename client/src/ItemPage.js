@@ -149,16 +149,20 @@ const ItemPage = (props) => {
 
     return (
         <>
+        <section
+        class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+        id="home"
+      >
             <div className='wishlistItem' /*style={{display:status}}*/>
                 <div><img src={props.photo} width="300rem" height="175rem" alt="itemphoto" /></div>
                 <div className='wishlistItemInfo'>
-                    <div className="wishlistItemName">{props.name}</div>
-                    <div className='wishlistItemPrice'>Price: ₹{props.price}</div>
-                    <div className='wishlistItemRating'>Rating:  {rating(props.rating)} ({props.rating} stars)</div>
-                    <div className='wishlistItemDesc'>description: {props.description}</div>
+                    <div className="wishlistItemName" style={{color:'black'}}>{props.name}</div>
+                    <div className='wishlistItemPrice' style={{color:'black'}}>Price: ₹{props.price}</div>
+                    <div className='wishlistItemRating' style={{color:'black'}}>Rating:  {rating(props.rating)} ({props.rating} stars)</div>
+                    <div className='wishlistItemDesc' style={{color:'black'}}>description: {props.description}</div>
                 </div>
                 <div className='buttonsDiv' style={{ marginTop: "1rem", marginLeft: "4rem" }}>
-                    <button type="button" className="btn btn-light" onClick={itemPage} >Show Item</button>
+                    <button type="button" className="btn btn-light" onClick={itemPage} style={{color:'black'}}>Show Item</button>
 
                     <button type="button" className="btn btn-light btnDelete" onClick={deleteFromWishlist} ><DeleteIcon /></button>
                     {
@@ -169,11 +173,11 @@ const ItemPage = (props) => {
                                 <br />
                                 <div className='quantityInputDiv'>
 
-                                    <label className='Label quantityLabel' style={{marginRight:"0.5rem",fontSize:"1.1rem"}} htmlFor="email">Quantity:</label>
+                                    <label className='Label quantityLabel' style={{marginRight:"0.5rem",fontSize:"1.1rem",color:'black'}} htmlFor="email" >Quantity:</label>
                                     <input className='Input_take quantityInput' type="number" style={{width:'6.5rem'}} name="quantity" id="quantity" required />
                                 </div>
                                 <br />
-                                <button type="button" className="btn btn-primary" onClick={() => submitFunc(props.id)}>Buy it now</button>
+                                <button type="button" className="button2" onClick={() => submitFunc(props.id)}>Buy it now</button>
                             </div>
                         // : <button type="button" className="btn btn-primary" style={{ marginLeft: "2rem" }} onClick={() => displayRazorpay(props.id)}>Buy it now</button>
                         // : <button type="button" className="btn btn-primary" style={{ marginLeft:"2rem"}} onClick={()=>buyItem(props.id)}>Buy it now</button>
@@ -182,6 +186,7 @@ const ItemPage = (props) => {
                 </div>
             </div>
             <hr className='hrwhite' /*style={{display:status}}*/ />
+        </section>
         </>
     )
 }

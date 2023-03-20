@@ -43,8 +43,12 @@ const Wishlist = () => {
     }, [])
     return (
         <>
+        <section
+        class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+        id="home"
+      >
             <div className="mainWishlistDiv">
-                <h2 className='headingWishList'>Wishlist Items</h2>
+                <h2 className='headingWishList' style={{color:'black'}}>Wishlist Items</h2>
                 {
                     items.length !== 0
                         ? items.map((val, index) => {
@@ -55,6 +59,7 @@ const Wishlist = () => {
                         : <div className='noItemMsg'>NO items Added...</div>
                 }
             </div>
+            </section>
         </>
     )
 }
