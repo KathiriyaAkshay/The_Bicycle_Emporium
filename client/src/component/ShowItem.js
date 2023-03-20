@@ -97,14 +97,15 @@ const ShowItem = () => {
 
     return (
         <>
+        
             <div className='MainItemDiv '>
                 <div className='photoDiv'><img src={item.photo} alt="Item Photo" width='600rem' height="400rem" /></div>
                 <div className='itemInfoDiv'>
-                    <div className="itemNameHeading">{item.name}</div>
-                    <div className='itemPriceHeading'>Price: ₹{item.price}</div>
+                    <div className="itemNameHeading" style={{color:'black'}}>{item.name}</div>
+                    <div className='itemPriceHeading'style={{color:'black'}}>Price: ₹{item.price}</div>
                     <br />
-                    <div className='ratingHeading'>Rating:  {rating(item.rating)} ({item.rating} stars)</div>
-                    <div className='descriptionItem'>description: <br /><p>{item.description}</p></div>
+                    <div className='ratingHeading'style={{color:'black'}}>Rating:  {rating(item.rating)} ({item.rating} stars)</div>
+                    <div className='descriptionItem' style={{color:'black'}}>description: <br /><p>{item.description}</p></div>
                     <div className='buttonsDiv'>
                         <button type="button" className="btn btn-light" onClick={() => addtoWishlist(!wishlistStatus)}>{
                             wishlistStatus ? "Remove from wishlist" : "♡ Add to wishlist"
@@ -118,10 +119,10 @@ const ShowItem = () => {
                                     <br />
                                     <div className='quantityInputDiv'>
 
-                                        <label className='Label quantityLabel' htmlFor="email">Quantity:</label>
+                                        <label className='Label quantityLabel' htmlFor="email" style={{color:'black'}}>Quantity:</label>
                                         <input className='Input_take quantityInput' type="number" name="quantity" id="quantity" required />
                                     </div>
-                                    <button type="button" className="btn btn-primary" onClick={() => submitFunc(item._id)}>Buy it now</button>
+                                    <button type="button" className="button2" style={{width:'175px'}} onClick={() => submitFunc(item._id)}> Buy it now</button>
                                     {/* <button type="button" className="btn btn-primary" onClick={() => displayRazorpay(item._id)}>Buy it now</button> */}
                                 </div>
                         }

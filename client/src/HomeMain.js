@@ -83,7 +83,7 @@ function HomeMain() {
   }
   const filterfun = () => {
     let temp = [...items];
-
+console.log(temp)
     if (option != "") {
       temp = temp.filter((ele) => {
         return ele.category.includes(option);
@@ -92,7 +92,7 @@ function HomeMain() {
 
     if (rating != "") {
       temp = temp.filter((ele) => {
-        return ele.rating.includes(rating);
+        return ele.rating === (rating);
       });
     }
     console.log(type);

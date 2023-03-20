@@ -66,7 +66,7 @@ function App() {
           <Route excat path="/about" element={<HomeMain />} />
           <Route exact path="/contact" element={<HomeMain />} />
           <Route exact path="/logout" element={<Logout />} />
-          <Route exact path="/showItem" element={<HomeMain />} />
+          <Route exact path="/showItem" element={<ShowItem />} />
           <Route exact path="/wishlist" element={<Wishlist />} />
           <Route exact path="/showOrders" element={<HomeMain />} />
           <Route exact path="/previousOrders" element={<HomeMain />} />
