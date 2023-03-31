@@ -32,15 +32,15 @@ const SingleOrder = (props) => {
                 <img src={props.photoUrl} width="300rem" height="175rem" alt="item_photo" />
             </div>
             <div className="orderDescription">
-                <div className='orderDescriptionItem orderDescriptionItem-name'>Name: {props.name}</div>
-                <div className='orderDescriptionItem'>Quantity: {props.quantity}</div>
-                <div className='orderDescriptionItem'>Paid Amount: ₹{props.total_amount}</div>
-                <div className='orderDescriptionItem'>Address: {props.address}</div>
-                <div className='orderDescriptionItem'>Order Date: {(new Date(props.orderDate)).toString()}</div>
+                <div className='orderDescriptionItem orderDescriptionItem-name' style={{color:'black'}}>Name: {props.name}</div>
+                <div className='orderDescriptionItem' style={{color:'black'}}>Quantity: {props.quantity}</div>
+                <div className='orderDescriptionItem' style={{color:'black'}}>Paid Amount: ₹{props.total_amount}</div>
+                <div className='orderDescriptionItem' style={{color:'black'}}>Address: {props.address}</div>
+                <div className='orderDescriptionItem' style={{color:'black'}}>Order Date: {(new Date(props.orderDate)).toString()}</div>
                 {
                     props.buttonDecide
-                        ? <div><div className='orderDescriptionItem'>Delivery Date: {(new Date(props.deliveryDate)).toString()}</div><button type="button" className="btn btn-light" onClick={() => { window.location.href = `/showItem?p=${props.id}` }}>Show Item</button></div>
-                        : <button type="button" className="btn btn-light" onClick={() => cancelOrder(props.id, props.orderDate, props.quantity)}>Cancel Order</button>
+                        ? <div><div className='orderDescriptionItem' style={{color:'black'}}>Delivery Date: {(new Date(props.deliveryDate)).toString()}</div><button type="button" className="button2" onClick={() => { window.location.href = `/showItem?p=${props.id}` }}>Show Item</button></div>
+                        : <button type="button" className="button2" onClick={() => cancelOrder(props.id, props.orderDate, props.quantity)}>Cancel Order</button>
 
                 }
             </div>

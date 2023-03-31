@@ -30,7 +30,7 @@ const ShowOrders = () => {
 
   return (
     <>
-      <h2 className='headingOrders' >Your Orders</h2>
+      <h2 className='headingOrders' style={{color:'black'}} >Your Orders</h2>
       <div className="orders">
         {/* name photo address quantity amount and date */}
         {
