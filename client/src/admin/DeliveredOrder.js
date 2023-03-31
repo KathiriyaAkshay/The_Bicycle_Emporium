@@ -27,7 +27,7 @@ const DeliveredOrder = () => {
     return (
         <>
             <div style={{width:"100%",height:"100%"}}>
-                <h2 className='headingOrders' >Delivered Orders</h2>
+                <h2 className='headingOrders' style={{color:'black'}} >Delivered Orders</h2>
                 <div className="orders">
                     {
                         orders.map((val, index) => {
