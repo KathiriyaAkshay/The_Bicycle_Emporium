@@ -1,5 +1,9 @@
 import React from 'react'
 import "./css/main.css"
+import {
+  Button,
+  Grid,
+} from '@mui/material';
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
 import EmailIcon from '@mui/icons-material/Email';
 import CommentIcon from '@mui/icons-material/Comment';
@@ -60,25 +64,28 @@ const Contact = () => {
 
   return (
     <>
-      <div className='superdiv'>
-        <div className='headingdiv '>
-          <h2>Reach Us</h2>
-        </div>
-
+    <section
+        class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+        id="home"
+      >
+      
+      <h2 class="section-title mb-40">
+      <span class="text-marked">Reach</span> <span style={{color:'black'}}>Us</span>
+    </h2>
         <div className='maindiv'>
           <div className='infodiv'>
             <div>
-              <span className='icons'><EmailIcon /></span>
-              <a href="mailto:rkandsons1996@yahoo.in">unofficialamitlimbasiya@gmail.com</a>
+              <span className='icons' style={{color:'black'}}><EmailIcon /></span>
+              <a href="mailto:rkandsons1996@yahoo.in" style={{color:'black'}}>unofficialamitlimbasiya@gmail.com</a>
             </div>
             <div>
-              <span className='icons'><LocalPhoneIcon /></span>
+              <span className='icons' style={{color:'black'}}><LocalPhoneIcon /></span>
 
-              <span>97373 47361</span>
+              <span style={{color:'black'}}>97373 47361</span>
             </div>
             <div>
-              <span className='icons'><EmailIcon /> Address:</span><br />
-              <p>
+              <span className='icons' style={{color:'black'}}><EmailIcon /> Address:</span><br />
+              <p style={{color:'black'}}>
                 BVM Engineering college. <br />
                 Vallabh Vidyanagar <br />
                 Anand, Gujarat 388120 <br />
@@ -88,38 +95,41 @@ const Contact = () => {
               <br /><br />
               <a href="https://www.google.co.in/maps/place/Birla+Vishvakarma+Mahavidyalaya+(BVM)/@22.5525136,72.923825,17z/data=!4m12!1m6!3m5!1s0x395e4e74c03b7749:0xab364c66fd4834c!2sBirla+Vishvakarma+Mahavidyalaya+(BVM)!8m2!3d22.5525136!4d72.923825!3m4!1s0x395e4e74c03b7749:0xab364c66fd4834c!8m2!3d22.5525136!4d72.923825?hl=en&authuser=0">
                   {/* <a href="https://www.google.co.in/maps/place/Birla+Vishvakarma+Mahavidyalaya+(BVM)/@22.5525136,72.9216363,17z/data=!3m1!4b1!4m5!3m4!1s0x395e4e74c03b7749:0xab364c66fd4834c!8m2!3d22.5525136!4d72.923825?hl=en&authuser=0"> */}
-              <button className='gdb-font'>Get Direction</button>
+              <button className='gdb-font' style={{color:'black'}}>Get Direction</button>
               </a>
             </div>
           </div>
           <div className='reachusdiv'>
             <div>
               <div>
-                <span className='icons'><DriveFileRenameOutlineIcon /></span>
-                <label htmlFor='name' className='Label'>Name:</label> <br />
+                <span className='icons' style={{color:'black'}}><DriveFileRenameOutlineIcon /></span>
+                <label htmlFor='name' className='Label' style={{color:'black'}}>Name:</label> <br />
                 <input type="text" name="name" id="name" size="40" className='Input_take' value={name} readOnly /><br /> <br />
               </div>
               <div className='ContactinputDivs'>
-                <span className='icons'><EmailIcon /></span>
-                <label htmlFor="email" className='Label'>Email:</label><br />
-                <input type="email" name="email" id="email" size="40" className='Input_take' value={email} readOnly /><br /> <br />
+                <span className='icons' style={{color:'black'}}><EmailIcon /></span>
+                <label htmlFor="email" className='Label' style={{color:'black'}}>Email:</label><br />
+                <input type="email" name="email" style={{color:'black'}} id="email" size="40" className='Input_take' value={email} readOnly /><br /> <br />
               </div>
               <div>
-                <span className='icons'><CommentIcon /></span>
+                <span className='icons' style={{color:'black'}}><CommentIcon /></span>
                 <br />
-                <textarea rows={10} cols={60} type="text" className='Input_take' placeholder='Enter the suggestions/query/feedback...' name="feedback" id="comment" required /><br /> <br />
+                <textarea rows={10} cols={60} type="text" className='Input_take' style={{color:'black'}} placeholder='Enter the suggestions/query/feedback...' name="feedback" id="comment" required /><br /> <br />
               </div>
-
-              <div>
-                <input type="button" className='SubmitButtonCss csb-fh' value="Submit" onClick={Submitfun} />
+              <div className="justify-content align-center  mt-3 ">
+              <div className="w-100" style={{ textAlign: 'center' }}>
+                <Button variant="contained" style={{ height: "41px", boxShadow: "2px -1px 32px 0px rgba(44,94,255,0.36)" }} value="Submit" onClick={Submitfun} className=" search-bar-button  m-auto ">
+                Submit
+              </Button>
               </div>
-
+            </div>
               <br />
-              <a href="/login">Already have an account? Login here!</a><br />
+              <a href="/login" style={{color:'black'}}>Already have an account? Login here!</a><br />
             </div>
           </div>
-        </div>
+        
       </div>
+      </section>
     </>
   )
 }
