@@ -19,16 +19,17 @@ const ShowFeedback = () => {
     const Feedback = (props) => {
         return (
             <>
+            
                 <div className='wishlistItem'>
                     <div className='wishlistItemInfo'>
-                        <div className="wishlistItemName">Email: {props.email}</div>
-                        <div className="wishlistItemName">Name: {props.name}</div>
-                        <div className='wishlistItemDesc'>Feedbacks: <br /><br />
+                        <div className="wishlistItemName" style={{color:'black'}}>Email: {props.email}</div>
+                        <div className="wishlistItemName" style={{color:'black'}}>Name: {props.name}</div>
+                        <div className='wishlistItemDesc' style={{color:'black'}} >Feedbacks: <br /><br />
                             {props.feedbacks.map((val, index) => {
                                 return (
                                     <div key={index}>
-                                        <p className='feedbackMsg' style={{marginBottom:"0px"}}>{val.feedback}</p>
-                                        <div className='wishlistItemDesc' style={{marginTop:"0px",marginBottom:"1.5rem"}}>Timestamp: {(new Date(val.date)).toString()}</div>
+                                        <p className='feedbackMsg' style={{marginBottom:"0px", color:'black'}} > {val.feedback}</p>
+                                        <div className='wishlistItemDesc' style={{marginTop:"0px",marginBottom:"1.5rem",color:'black'}} >Timestamp: {(new Date(val.date)).toString()}</div>
                                     </div>
                                 )
                             })}
