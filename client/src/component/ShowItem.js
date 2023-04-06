@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import getCookie from '../controllers/cookieManagement'
 import displayRazorpay from '../controllers/buyItem';
+
 const ShowItem = () => {
 
     let token = getCookie('jwtoken')
@@ -99,7 +100,9 @@ const ShowItem = () => {
         <>
         
             <div className='MainItemDiv '>
+                
                 <div className='photoDiv'><img src={item.photo} alt="Item Photo" width='600rem' height="400rem" /></div>
+                    
                 <div className='itemInfoDiv'>
                     <div className="itemNameHeading" style={{color:'black'}}>{item.name}</div>
                     <div className='itemPriceHeading'style={{color:'black'}}>Price: ₹{item.price}</div>

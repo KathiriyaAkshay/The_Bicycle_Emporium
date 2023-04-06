@@ -5,7 +5,6 @@ import url from "./images/bicycle.png";
 // importing all files
 import Card from "./component/Card/card";
 import Footer from "./component/footer/footer1";
-import ServiceFaqM from "./component/Faq/ServiceFaqM";
 import { Link } from "react-router-dom";
 import Header from "./component/Header";
 import auth from "./controllers/authentication";
@@ -157,7 +156,7 @@ console.log(temp)
               </Link>
             </div>
 
-            <a href="https://svgshare.com/s/gH0" className="right">
+            <a href="#" className="right">
               <img class="img-fluid  d-none d-sm-block" src={url} title="" />
             </a>
           </div>
@@ -234,7 +233,7 @@ console.log(temp)
             return (
               <div
                 key={index}
-                className="SubCardDiv  col-4"
+                className="SubCardDiv"
                 onClick={() => itemPage(item._id)}
                 style={{
                   gridRowStart: Math.floor(index / 3) + 1,
@@ -256,21 +255,8 @@ console.log(temp)
         </div>
         </div>
 
-        <div class="container ">
-          <div className=" col-md-12 ml-0 ml-lg-3 my-2 my-lg-0 text-center">
-            <Link style={{ textDecoration: "none" }} to="/ViewAllBicycles">
-              <a className=" button2 " href="#">
-                view more
-              </a>
-            </Link>
-          </div>
-        </div>
       </section>
-      {/* Bicycle card end  */}
 
-      {/* Faq starts  */}
-
-      {/* faq ends  */}
       <Footer />
     </>
   );

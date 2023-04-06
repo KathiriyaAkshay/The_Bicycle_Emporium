@@ -323,7 +323,8 @@ body {
     margin-left: 1vh;
     margin-right: 10vh;
     padding: 3vh;
-    justify-content: center;
+    /* justify-content: center; */
+    text-align: left !important;
 }
 
 .infodiv div {
@@ -656,6 +657,7 @@ body {
 .orderDescription{
     margin-left: 5rem;
     padding: 0.4rem;
+    text-align: left;
 }
 .orderDescriptionItem{
     font-family: 'Mukta',sans-serif;
@@ -667,6 +669,7 @@ body {
 .orderUserDescription{
     width: 25%;
     margin-left: 2rem;
+    text-align: left;
 }
 .btnDelete{
     width: 3.1rem;

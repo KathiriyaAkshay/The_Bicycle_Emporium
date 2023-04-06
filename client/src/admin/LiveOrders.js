@@ -47,7 +47,12 @@ const LiveOrders = () => {
 
     return (
         <>
-            <h2 className='headingOrders' >Live Orders</h2>
+        <section
+        class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+        id="home"
+        style={{height:'600px'}}
+      >        
+            <h2 class="section-title mb-40"><span class="text-marked">Live </span> <span style={{color:'black'}}>Orders</span></h2>
             <div className="orders">
                 {
                     orders.map((val, index) => {
@@ -55,6 +60,7 @@ const LiveOrders = () => {
                     })
                 }
             </div>
+            </section>
         </>
     )
 }

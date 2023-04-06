@@ -30,7 +30,11 @@ const ShowOrders = () => {
 
   return (
     <>
-      <h2 className='headingOrders' style={{color:'black'}} >Your Orders</h2>
+    <section
+    class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+    id="home"
+  >
+  <h2 class="section-title mb-40"><span class="text-marked">Your </span> <span style={{color:'black'}}>Orders</span></h2>
       <div className="orders">
         {/* name photo address quantity amount and date */}
         {
@@ -41,6 +45,7 @@ const ShowOrders = () => {
           })
         }
       </div>
+      </section>
     </>
   )
 }

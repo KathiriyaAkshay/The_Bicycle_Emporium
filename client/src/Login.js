@@ -155,9 +155,12 @@ const Login = () => {
             <div className='inputDivs'>
               <input className='SubmitButtonCss' type="button" value="Submit" onClick={submitFun} />
             </div>
-
-
-
+<br/>
+            <div style={{ 'float':'none',
+            'position':'static',
+            'display':'block',
+            'margin':'auto',
+            'width':'max-content' }}>
             <GoogleOAuthProvider clientId="996507416949-h17vfj5ig72jgkhvqqcv6a1e1mt5sq4v.apps.googleusercontent.com">
 
 
@@ -173,7 +176,7 @@ const Login = () => {
                 }}
               />
             </GoogleOAuthProvider>
-
+            </div>
             <br /><br />
             <a className='Anchor_tag' href="/register">Don't have an account? Register here!</a><br />
             <a className='Anchor_tag' href="/forgotPassword">Forgot password?</a>

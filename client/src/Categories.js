@@ -36,7 +36,7 @@ const Categories = () => {
       >  
        
             <div className="categoriesButtonDiv">
-                <a className='categoryLinks' style={{ gridColumnStart: 1 }}><button type="button" id="cycle_3tyre" className="btn"  onClick={getData}>3-tyre/with support wheel cycle</button></a>
+                <a className='categoryLinks' style={{ gridColumnStart: 1 }}><button type="button" id="cycle_3tyre" className="btn"  onClick={getData}>With support wheel cycle</button></a>
                 <a className='categoryLinks' style={{ gridColumnStart: 2 }}><button type="button" id="cycle_small" className="btn"  onClick={getData}>Small cycles</button></a>
                 <a className='categoryLinks' style={{ gridColumnStart: 3 }}><button type="button" id="cycle_medium" className="btn" onClick={getData}>Medium cycles</button></a>
                 <a className='categoryLinks' style={{ gridColumnStart: 4 }}><button type="button" id="cycle_large" className="btn"  onClick={getData}>Large cycles</button></a>

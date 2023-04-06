@@ -51,10 +51,10 @@ async function displayRazorpay(id, quantity, address) {
         if (amount > 60000)
             amount = 60000
         const options = {
-            key: "rzp_test_rkVGR1MWhLUKz0", // Enter the Key ID generated from the Dashboard
+            key: "rzp_test_w06JPcFHTKh036", // Enter the Key ID generated from the Dashboard, SECRET KEY : wgWzA0M3gQnLY9OtLU3mpZAI
             amount: amount * 100,
             currency: 'INR',
-            name: "Ecommerce Cycle selling",
+            name: "The Bicycle Emporium",
             description: "Test Transaction",
             handler: async function (response) {
                 // const data = {

@@ -1,6 +1,7 @@
 import React from 'react'
 import getCookie from '../controllers/cookieManagement'
 
+
 const SingleOrder = (props) => {
 
     const cancelOrder = async (id, orderDate,quantity) => {

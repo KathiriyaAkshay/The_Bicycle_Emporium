@@ -94,7 +94,7 @@ const AddCycle = () => {
           <br /> <br />
         </div>
         <div className='regInputDivs'>
-          <label htmlFor="desc" className='Label'>Description:</label><br />
+          <label htmlFor="desc" className='Label'>Description: </label><br />
           <textarea name="desc" id="desc" cols="30" rows="5" className='Input_take' required ></textarea>
           <br /> <br />
         </div>
