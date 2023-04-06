@@ -188,14 +188,9 @@ console.log(temp)
               <h3>Filter : </h3>
             </div>
             <select onChange={handleChange}>
-              <option value="cycle_3tyre">cycle_3tyre</option>
-              <option value="cycle_small" selected>
-                small-size cycle
-              </option>
-              <option value="cycle_medium">medium-size cycle</option>
-              <option value="cycle_large" >
-                large-size cycle
-              </option>
+              <option value="na">Gender</option>
+              <option value="male">MALE</option>
+              <option value="female">FEMALE</option>
             </select>
             <select onChange={handleChange2}>
               <option value="3" selected>
@@ -206,9 +201,8 @@ console.log(temp)
               <option value="19">18+ years</option>
             </select>
             <select onChange={handleChange3}>
-              <option value="na">Gender</option>
-              <option value="male">MALE</option>
-              <option value="female">FEMALE</option>
+              <option value="gear">Gear</option>
+              <option value="nongear">Non-Gear</option>
             </select>
             <button
               class="btn btn-dark btn-lg  applyfilt"
