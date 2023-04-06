@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../css/main.css";
+import "../css/home.css";
 import "./plugins.min.css";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -17,7 +18,7 @@ function AdminHeader() {
             <div className="col-md-12">
               <nav className="navbar navbar-expand-lg navbar-light">
                 <Link style={{ textDecoration: "none" }} to="/">
-                  <a className="navbar-brand" href="#index.php">
+                  <a className="navbar-brand" href="#">
                     {/* <img
             className="logo"
             src="https://www.sih.gov.in/img1/SIH2022-white-logo.png"/> */}
@@ -110,10 +111,7 @@ function AdminHeader() {
                       >
                         Delivered Orders
                       </NavLink>
-                    </li>
-
-                  
-                    
+                    </li>                                      
 
                     <li className="nav-item ">
                       <NavLink className="nav-link " to="/admin/feedbacks">
@@ -125,9 +123,7 @@ function AdminHeader() {
                         <NavLink className="nav-link" to="/logoutAdmin">
                           LogOut
                         </NavLink>
-                      </li>
-
-                      
+                      </li>                      
                   
                   </ul>
                 </div>

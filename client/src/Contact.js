@@ -76,12 +76,12 @@ const Contact = () => {
           <div className='infodiv'>
             <div>
               <span className='icons' style={{color:'black'}}><EmailIcon /></span>
-              <a href="mailto:rkandsons1996@yahoo.in" style={{color:'black'}}>unofficialamitlimbasiya@gmail.com</a>
+              <a href="mailto:unofficial.the.bicycle.emporium@gmail.com" style={{color:'black'}}>unofficial.the.bicycle.emporium@gmail.com</a>
             </div>
             <div>
               <span className='icons' style={{color:'black'}}><LocalPhoneIcon /></span>
 
-              <span style={{color:'black'}}>97373 47361</span>
+              <span style={{color:'black'}}>6351273627</span>
             </div>
             <div>
               <span className='icons' style={{color:'black'}}><EmailIcon /> Address:</span><br />

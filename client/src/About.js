@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import auth from './controllers/authentication'
-
+import "./css/main.css"
 const About = () => {
   useEffect(() => { auth() }, [])
 
@@ -24,11 +24,11 @@ const About = () => {
           {/* <div className="aboutLogoDiv"><img src="logo_named.jpg" alt="logo" className="AboutLogo"/></div> */}
           <div className="aboutInfoDiv" style={{color:'black'}}>
               <h4>Business Information:  </h4>
-              <p className="biheading" style={{color:'black'}}>E-commerce cycle selling website </p>
-              we are the group of three persons,selling the cycle virtually.
+              <p className="biheading" style={{color:'black'}}>The Bicycle Emporium</p>
+              we are the group of people ,selling the cycle virtually.
             <br />
             <h4 style={{color:'black'}}>Products and Services offered:</h4>
-            <p style={{color:'black'}}>we are the team of developers developing E-commerce cycle selling website. And trying to improve our wesite...</p>
+            <p style={{color:'black'}}>we are the team of developers developing  Bicycle selling website. And trying to improve our wesite...</p>
           </div>
 
         </div>

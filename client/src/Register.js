@@ -3,7 +3,6 @@ import "./css/main.css"
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
 import LockIcon from '@mui/icons-material/Lock';
 import EmailIcon from '@mui/icons-material/Email';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useNavigate } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { GoogleLogin } from '@react-oauth/google';
@@ -67,13 +66,13 @@ const Register = () => {
   const registerFunction = async () => {
     const name = document.getElementById("name").value
     const email = document.getElementById("email").value
-    
+
     const password = document.getElementById("password").value
     const cpassword = document.getElementById("cpassword").value
     const userOtp = document.getElementById("otp").value
 
     if (otp == userOtp) {
-      if (name === '' || email === ''  || password === '' || cpassword === '') {
+      if (name === '' || email === '' || password === '' || cpassword === '') {
         alert("Enter details properly!!!")
         document.getElementById("name").focus();
       }
@@ -109,27 +108,27 @@ const Register = () => {
     }
   }
 
-  const registerGFunction = async (details)=>{
+  const registerGFunction = async (details) => {
     console.log(details.name);
     console.log(details.email);
     const reqUrl = "http://localhost:5000/user/createUser";
-        const reqOptions = {
-          method: "POST",
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ "name": details.name, "email": details.email, "password": "google123" })
-        }
-        const result = await fetch(reqUrl, reqOptions);
-        const response = await result.json();
-        if (response.status === 'success') {
-          setCookie("jwtoken", response.token, 0.5)
-          alert("User Signed in Successfully!!!")
-          navigate('/')
-          window.location.reload(false);
-        }
-        else if (response.status === 'failed') {
-          alert("Account already exists!!!")
-          navigate('/login')
-        }
+    const reqOptions = {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ "name": details.name, "email": details.email, "password": "google123" })
+    }
+    const result = await fetch(reqUrl, reqOptions);
+    const response = await result.json();
+    if (response.status === 'success') {
+      setCookie("jwtoken", response.token, 0.5)
+      alert("User Signed in Successfully!!!")
+      navigate('/')
+      window.location.reload(false);
+    }
+    else if (response.status === 'failed') {
+      alert("Account already exists!!!")
+      navigate('/login')
+    }
   }
 
   return (
@@ -149,7 +148,7 @@ const Register = () => {
           <label htmlFor="email" className='Label'>Email:</label><br />
           <input type="email" name="email" id="email" className='Input_take' required /><br /> <br />
         </div>
-        
+
         <div className='regInputDivs' style={{ display: divs }}>
           <span className='icons'><LockIcon /></span>
           <label htmlFor="password" className='Label'>Password:</label><br />
@@ -165,22 +164,27 @@ const Register = () => {
         <div className='SubmitDiv' style={{ display: divs }}>
           <input type="submit" value="Submit" className='regSubmitButtonCss' onClick={sendOtp} />
         </div>
-        <hr/>
-        <GoogleOAuthProvider clientId="996507416949-h17vfj5ig72jgkhvqqcv6a1e1mt5sq4v.apps.googleusercontent.com">
+        <div  style={{ 'float':'none',
+          'position':'static',
+          'display':'block',
+          'margin':'auto',
+          'width':'max-content' }}>
+          <GoogleOAuthProvider clientId="996507416949-h17vfj5ig72jgkhvqqcv6a1e1mt5sq4v.apps.googleusercontent.com">
 
 
-              <GoogleLogin
-                onSuccess={credentialResponse => {
-                  const details = jwt_decode(credentialResponse.credential);
-                  console.log(credentialResponse);
-                  console.log(details);
-                  registerGFunction(details);
-                }}
-                onError={() => {
-                  console.log('Login Failed');
-                }}
-              />
-            </GoogleOAuthProvider>
+            <GoogleLogin
+              onSuccess={credentialResponse => {
+                const details = jwt_decode(credentialResponse.credential);
+                console.log(credentialResponse);
+                console.log(details);
+                registerGFunction(details);
+              }}
+              onError={() => {
+                console.log('Login Failed');
+              }}
+            />
+          </GoogleOAuthProvider>
+        </div>
         <a style={{ display: divs }} className='Anchor_tag' href="/login">Already have an account? Login here!</a><br />
 
         <div className='inputDivs' style={{ display: showOtpBlock }}>
@@ -191,7 +195,7 @@ const Register = () => {
           <input className='Input_take' type="text" name="otp" id="otp" required /><br />
           <br />
         </div>
-        <div className='inputDivs' style={{ display: showOtpBlock ,marginBottom:"2rem"}}>
+        <div className='inputDivs' style={{ display: showOtpBlock, marginBottom: "2rem" }}>
           <input className='SubmitButtonCss' type="button" value="Submit" onClick={registerFunction} />
         </div>
       </div>

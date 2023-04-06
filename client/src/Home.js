@@ -39,7 +39,7 @@ const Home = () => {
       <div className='MainHomeDiv'>
         <div className='MainHeadingHome'>E-COMMERCE CYCLE SELLING WEBSITE</div>
         <div className='HomeImgDiv'>
-          <img src="cycle_photo.jpg"  alt="Photo" draggable="false" onDragStart={()=>{return false}} />
+          <img src="cycle_photo.jpg" alt="Photo" draggable="false" onDragStart={() => { return false }} />
           <p>E commerce website for cycle selling.</p>
         </div>
         <div className='MainCardDiv'>

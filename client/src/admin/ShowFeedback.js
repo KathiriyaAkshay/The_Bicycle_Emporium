@@ -20,7 +20,7 @@ const ShowFeedback = () => {
         return (
             <>
             
-                <div className='wishlistItem'>
+                <div className='wishlistItem' id='#home'>
                     <div className='wishlistItemInfo'>
                         <div className="wishlistItemName" style={{color:'black'}}>Email: {props.email}</div>
                         <div className="wishlistItemName" style={{color:'black'}}>Name: {props.name}</div>

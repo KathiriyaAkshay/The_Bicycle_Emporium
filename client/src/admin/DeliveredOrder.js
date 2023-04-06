@@ -26,8 +26,13 @@ const DeliveredOrder = () => {
 
     return (
         <>
+        <section
+        class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+        id="home"
+        style={{height:'600px'}}
+      >        
             <div style={{width:"100%",height:"100%"}}>
-                <h2 className='headingOrders' style={{color:'black'}} >Delivered Orders</h2>
+            <h2 class="section-title mb-40"><span class="text-marked">Delivered </span> <span style={{color:'black'}}>Orders</span></h2>
                 <div className="orders">
                     {
                         orders.map((val, index) => {
@@ -40,6 +45,7 @@ const DeliveredOrder = () => {
                     <button className='nextOrders'>next</button>
                 </div> */}
             </div>
+            </section>
         </>
     )
 }

@@ -34,7 +34,7 @@ const ShowOrders = () => {
     class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
     id="home"
   >
-      <h2 className='headingOrders' style={{color:'black'}}>Delivered Orders</h2>
+  <h2 class="section-title mb-40"><span class="text-marked">Previous </span> <span style={{color:'black'}}>Orders</span></h2>
       <div className="orders">
         {/* name photo address quantity amount and date */}
         {
