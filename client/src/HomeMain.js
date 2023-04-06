@@ -68,7 +68,7 @@ function HomeMain() {
   };
   const [option, setOption] = useState();
   const [rating, setRating] = useState();
-  const [type, setType] = useState();
+  const [typee, setTypee] = useState();
 
   function handleChange(event) {
     setOption(event.target.value);
@@ -77,33 +77,88 @@ function HomeMain() {
     setRating(event.target.value);
   }
   function handleChange3(event) {
-    setType(event.target.value);
+    setTypee(event.target.value);
   }
   const filterfun = () => {
     let temp = [...items];
 console.log(temp)
-    if (option != "") {
-      temp = temp.filter((ele) => {
-        return ele.category.includes(option);
-      });
-    }
-
-    if (rating != "") {
-      temp = temp.filter((ele) => {
-        return ele.rating === (rating);
-      });
-    }
-    console.log(type);
-    if (type != "") {
-      temp = temp.filter((ele) => {
-        console.log("i'm insidee");
-        return ele.homeAvailability.type;
-      });
-    }
-    console.log("hey i'm outside'");
-
-    console.log(temp);
-    setitems(temp);
+console.log(option)
+console.log(rating)
+console.log(typee)
+if(option==='male' && rating==='7' && typee==='gear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_3tyre';
+  })
+  console.log(temp);
+}else if(option==='male' && rating==='13' && typee==='gear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_large';
+  })
+  console.log(temp);
+}else if(option==='male' && rating==='19' && typee==='gear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_medium';
+  })
+  console.log(temp);
+}else if(option==='female' && rating==='7' && typee==='gear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_small';
+  })
+  console.log(temp);
+}else if(option==='female' && rating==='13' && typee==='gear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_small';
+  })
+  console.log(temp);
+}else if(option==='female' && rating==='19' && typee==='gear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_medium';
+  })
+  console.log(temp);
+}else if(option==='male' && rating==='7' && typee==='nongear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_3tyre';
+  })
+  console.log(temp);
+}else if(option==='male' && rating==='13' && typee==='nongear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_large';
+  })
+  console.log(temp);
+}else if(option==='male' && rating==='19' && typee==='nongear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_3tyre';
+  })
+  console.log(temp);
+}else if(option==='female' && rating==='7' && typee==='nongear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_small';
+  })
+  console.log(temp);
+}else if(option==='female' && rating==='13' && typee==='nongear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_medium';
+  })
+  console.log(temp);
+}else if(option==='female' && rating==='19' && typee==='nongear'){
+  temp = temp.filter((ele)=>{
+    console.log(ele);
+    return ele.category === 'cycle_large';
+  })
+  console.log(temp);
+} 
+setitems(temp);
   };
 
   useEffect(() => {
@@ -201,6 +256,9 @@ console.log(temp)
               <option value="19">18+ years</option>
             </select>
             <select onChange={handleChange3}>
+            <option value="nothing" selected>
+                Select Gear
+              </option>
               <option value="gear">Gear</option>
               <option value="nongear">Non-Gear</option>
             </select>
