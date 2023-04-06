@@ -66,7 +66,6 @@ function HomeMain() {
     // sessionStorage.setItem('searchinput', searchinput);
     // setFlag("true");
   };
-
   const [option, setOption] = useState();
   const [rating, setRating] = useState();
   const [type, setType] = useState();
@@ -121,7 +120,6 @@ console.log(temp)
   const itemPage = (id) => {
     window.location.href = "./showItem?p=" + id;
   };
-
   return (
     <>
       {/* header  */}
@@ -195,26 +193,27 @@ console.log(temp)
                 small-size cycle
               </option>
               <option value="cycle_medium">medium-size cycle</option>
-              <option value="cycle_large" selected>
+              <option value="cycle_large" >
                 large-size cycle
               </option>
             </select>
             <select onChange={handleChange2}>
               <option value="3" selected>
-                Rating Above 3
+                Select Age
               </option>
-              <option value="4">Rating Above 4</option>
-              <option value="5">Rating Above 5</option>
+              <option value="7">6-12 years</option>
+              <option value="13">12-18 years</option>
+              <option value="19">18+ years</option>
             </select>
             <select onChange={handleChange3}>
-              <option value="">Home Availability</option>
-              <option value="true">YES</option>
-              <option value="false">NO</option>
+              <option value="na">Gender</option>
+              <option value="male">MALE</option>
+              <option value="female">FEMALE</option>
             </select>
             <button
               class="btn btn-dark btn-lg  applyfilt"
               type="button"
-              onClick={filterfun}
+          onClick={filterfun}
             >
               Apply
             </button>
