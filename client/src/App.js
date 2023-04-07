@@ -26,6 +26,7 @@ import HomeMain from "./HomeMain";
 import Header from "./component/Header";
 import AdminHeader from "./component/AdminHeader";
 import AddCycle2 from "./admin/AddCycle2";
+import UserProfile from "./component/UserProfile";
 
 const LogOutAdmin=()=>{
   sessionStorage.removeItem("type")
@@ -70,6 +71,7 @@ function App() {
           <Route exact path="/wishlist" element={<Wishlist />} />
           <Route exact path="/showOrders" element={<ShowOrders />} />
           <Route exact path="/previousOrders" element={<PreviousOrders />} />
+          <Route exact path="/userprofile" element={<UserProfile />} />
           <Route exact path="/forgotPassword" element={<ForgotPassword />} />
           <Route exact path="/sdff" element={<HomeMain/>} />
               

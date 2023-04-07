@@ -277,7 +277,14 @@ mark {
     padding: 5px;
     border: 1px solid black;
 }
-
+.form-inputt {
+    /*  */
+    margin: 20px;
+    width: 100%;
+    height: 46px;
+    padding: 5px;
+    border: 1px solid black;
+}
 .f-textarea{
     /*  */
     margin: 20px;
