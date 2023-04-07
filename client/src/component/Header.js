@@ -153,7 +153,23 @@ function Header() {
                         LogOut
                       </NavLink>
                     </li>
+
                    
+
+
+                 
+                  
+                    <NavLink className="" to="/userprofile">
+                    <img
+
+                    src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+
+                    className="w-110 h-110 rounded-circle"
+                    style={{ width: 50, height: 50,marginLeft:'10px' }}
+               
+                  />
+                    </NavLink>
+          
                   
                   </ul>
                 </div>
