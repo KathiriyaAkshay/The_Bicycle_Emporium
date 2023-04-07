@@ -7,6 +7,7 @@ import "./plugins.min.css";
 
 function Header() {
   const location = useLocation();
+  const [scho, setscho] = useState({ display: "none" });
   const getCookie = (cookie_name) => {
     const re = new RegExp(`(?<=${cookie_name}=)[^;]*`);
     try {
@@ -78,40 +79,46 @@ function Header() {
                     >
                       <NavLink
                         className="nav-link  dropdown-toggle"
-                        to="/wishlist"
+                        to="/error"
                         id="navbarDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="true"
                       >
+                        Orders
+                      </NavLink>
+
+                      <div
+                        className="dropdown-menu  "
+                        aria-labelledby="navbarDropdown"
+                      >
+                    
+                        <NavLink
+                          to="/wishlist"
+                          className=" dropdown-item"
+                        >
                         Wishlist
-                      </NavLink>
+                        </NavLink>
 
-                      </li>
-
-                      <li
-                      className="nav-item dropdown"
-                    >
-                      <NavLink
-                        className="nav-link  dropdown-toggle"
-                        to="/showOrders" 
-                        id="navbarDropdown"
-                      >
+                        <NavLink
+                          to="/showOrders"
+                          className=" dropdown-item"
+                        >
                         Show Orders
-                      </NavLink>
+                        </NavLink>
 
-                      </li>
-
-                      <li
-                      className="nav-item dropdown"
-                    >
-                      <NavLink
-                        className="nav-link  dropdown-toggle"
-                        to="/previousOrders"
-                        id="navbarDropdown"
-                      >
+                        <NavLink
+                          to="/previousOrders"
+                          className=" dropdown-item"
+                        >
                         Prev Orders
-                      </NavLink>
+                        </NavLink>
+                      </div>
+                    </li>
 
-                      </li>
 
+                     
                       <li
                       className="nav-item dropdown"
                     >
