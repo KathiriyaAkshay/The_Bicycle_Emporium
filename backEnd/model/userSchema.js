@@ -25,6 +25,10 @@ const userSchema= mongoose.Schema({
         type:String,
         required: true
     },
+    address: {
+        type: String,
+        trim: true
+    },
     wishlist:[{
         item:{
             type:String,
