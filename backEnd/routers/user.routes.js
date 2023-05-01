@@ -202,7 +202,7 @@ app.post('/getInfo', async (req, res) => {
     if (!user) {
         res.json({ "status": 'no' })
     }
-    res.json({ 'name': user.name, 'email': user.email })
+    res.json({ 'name': user.name, 'email': user.email, 'address': user.address })
 })
 app.post('/getWishlist', async (req, res) => {
     const token = req.body.token
@@ -238,6 +238,24 @@ app.post('/changePW', async (req, res) => {
     else {
         const pass = await bcrypt.hash(password, 10);
         const status = await User.updateOne({ "email": email }, { $set: { 'password': pass } })
+        if (status) {
+            res.json({ "status": "success" })
+        }
+        else {
+            res.json({ "status": "failed" })
+        }
+    }
+})
+
+app.post('/changeAdd', async (req, res) => {
+    const email = req.body.email
+    const address = req.body.address
+    let user = await User.findOne({ email })
+    if (!user) {
+        res.json({ "status": "failed" })
+    }
+    else {
+        const status = await User.updateOne({ "email": email }, { $set: { 'address': address } })
         if (status) {
             res.json({ "status": "success" })
         }
