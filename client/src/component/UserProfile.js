@@ -5,7 +5,7 @@ import Beginner from "./beginner.jpg";
 import Intermediate from "./intermediate.jpg";
 import Master from "./master.jpg";
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
-
+import Header from "./component/Header";
 import auth from '../controllers/authentication'
 import getCookie from '../controllers/cookieManagement'
 
@@ -62,7 +62,7 @@ export default function UserProfile() {
   
   return (
     <>
-  
+    <Header />
     <section
     class="bg-dark "
     id="home"

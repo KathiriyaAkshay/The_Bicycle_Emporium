@@ -58,7 +58,7 @@ function App() {
   else{
     return (
       <>
-        <Header />
+        
         <Routes>
           <Route exact path="/" element={<HomeMain />} />
           <Route exact path="/register" element={<Register />} />

@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import getCookie from '../controllers/cookieManagement'
 import displayRazorpay from '../controllers/buyItem';
+import Header from "./component/Header";
 
 const ShowItem = () => {
 
@@ -98,7 +99,7 @@ const ShowItem = () => {
 
     return (
         <>
-        
+        <Header />
             <div className='MainItemDiv '>
                 
                 <div className='photoDiv'><img src={item.photo} alt="Item Photo" width='600rem' height="400rem" /></div>
@@ -138,26 +139,4 @@ const ShowItem = () => {
 }
 
 export default ShowItem
-// category
-// :
-// "cycle_small"
-// description
-// :
-// "asdn"
-// homeAvailability
-// :
-// true
-// name
-// :
-// "cycle1"
-// photo
-// :
-// "https://res.cloudinary.com/rk-cycle-photoes/image/upload/v1665430787/yu2g9exc2bxojkz1ikpl.jpg"
-// price
-// :
-// 1234
-// public_id
-// :
-// "yu2g9exc2bxojkz1ikpl"
-// rating
-// : 
+

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import getCookie from './controllers/cookieManagement'
 import ItemPage from './ItemPage'
-
+import Header from "./component/Header";
 const Wishlist = () => {
     const [items, setItems] = useState([])
 
@@ -43,6 +43,7 @@ const Wishlist = () => {
     }, [])
     return (
         <>
+        <Header />
         <section
         class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
         id="home"

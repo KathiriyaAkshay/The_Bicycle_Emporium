@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react'
+import Header from "./component/Header";
 import CycleCard from './component/CycleCard';
 
 const Categories = () => {
@@ -29,6 +30,7 @@ const Categories = () => {
         window.location.href = './showItem?p=' + id
     }
     return (
+        <div><Header />
         <>
         <section
         class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
@@ -54,6 +56,7 @@ const Categories = () => {
       
             </section>
         </>
+        </div>
     )
 }
 
