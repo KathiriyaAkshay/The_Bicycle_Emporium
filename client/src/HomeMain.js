@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./css/home.css";
 import url from "./images/bicycle.png";
-
+import getCookie from "./controllers/cookieManagement";
 // importing all files
 import Card from "./component/Card/card";
 import Footer from "./component/footer/footer1";
@@ -11,6 +11,7 @@ import auth from "./controllers/authentication";
 import CycleCard from "./component/CycleCard";
 
 function HomeMain() {
+  
   const [items, setitems] = useState([{}]);
   let status = 0;
 
@@ -26,7 +27,7 @@ function HomeMain() {
     status = 1;
     checkStatus();
   };
-
+ 
   const [searchinput, searchinputUpdate] = useState("");
 
   const filter2 = () => {
@@ -37,27 +38,6 @@ function HomeMain() {
         return ele.name.toLowerCase().includes(searchinput.toLowerCase());
       });
     }
-
-    // if (tagList != "" && tag != "") {
-    //     temp = temp.filter((ele) => {
-    //       return ele.Tags.includes(tag);
-    //     });
-    //   }
-
-    //   if (tagList != "" && lang != "") {
-
-    //     temp = temp.filter((ele) => {
-    //       return ele.Tags.includes(lang);
-    //     });
-    //   }
-
-    //   if (tagList != "" && timeframe != "") {
-
-    //     temp = temp.filter((ele) => {
-    //       console.log(ele.Date.getFullYear);
-    //       return ele.Date.getFullYear === timeframe;
-    //     });
-    //   }
 
     console.log("---r---");
     console.log(temp);
@@ -173,7 +153,12 @@ setitems(temp);
   };
 
   const itemPage = (id) => {
+    let token = getCookie('jwtoken')
+    if(token!=='NOTEXIST'){
     window.location.href = "./showItem?p=" + id;
+    }else{
+      window.location.href = "/login";
+    }
   };
   return (
     <>

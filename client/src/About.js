@@ -4,7 +4,7 @@ import auth from './controllers/authentication'
 import "./css/main.css"
 import Header from "./component/Header";
 const About = () => {
-  useEffect(() => { auth() }, [])
+  // useEffect(() => { auth() }, [])
 
 
   return (

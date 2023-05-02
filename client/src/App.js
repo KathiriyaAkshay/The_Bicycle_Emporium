@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import NavigationBar from './component/NavigationBar';
 import AdminNavigationBar from './component/AdminNavigationBar';
-import Home from "./Home"
+
 import Categories from "./Categories"
 import About from "./About"
 import Contact from "./Contact"
@@ -33,6 +33,7 @@ const LogOutAdmin=()=>{
   window.location.href="/";
   return ;
 }
+
 function App() {
   if (sessionStorage.getItem("type") === "Admin") {
     return (

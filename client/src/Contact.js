@@ -32,8 +32,8 @@ const Contact = () => {
     setEmail(response.email)
   }
   useEffect(() => {
-    auth()
-    getData()
+    // auth()
+    // getData()
   }, [])
 
 

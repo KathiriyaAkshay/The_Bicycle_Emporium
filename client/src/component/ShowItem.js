@@ -6,6 +6,7 @@ import displayRazorpay from '../controllers/buyItem';
 const ShowItem = () => {
 
     let token = getCookie('jwtoken')
+    console.log(token)
     const url_string = window.location;
     const url = new URL(url_string);
     const id = url.searchParams.get('p');
