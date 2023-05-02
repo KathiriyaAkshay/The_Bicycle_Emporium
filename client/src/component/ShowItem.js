@@ -2,7 +2,6 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import getCookie from '../controllers/cookieManagement'
 import displayRazorpay from '../controllers/buyItem';
-import Header from "./component/Header";
 
 const ShowItem = () => {
 
@@ -13,6 +12,7 @@ const ShowItem = () => {
 
     const [item, setItem] = useState({})
     const [wishlistStatus, setWishlistStatus] = useState(false)
+    const [singleUser, setSingleUser] = useState({});
 
     const checkStatus = async () => {
         const reqUrl = 'http://localhost:5000/user/checkWishlist';
@@ -80,11 +80,30 @@ const ShowItem = () => {
         }
         return s
     }
-
-    const submitFunc = (id) => {
+    const getUser = async () => {
+        const token = getCookie('jwtoken');
+        const reqUrl = 'http://localhost:5000/user/getUser';
+        const reqOptions = {
+          method: "POST",
+          headers: { 'Content-Type': 'application/json;charset=utf-8' },
+          body: JSON.stringify({ token, status: true })
+        }
+        const result = await fetch(reqUrl, reqOptions);
+        const response = await result.json()
+        if (response.user === "error") {
+          alert("Oops!!! something went wrong. Refresh and try again...");
+        }
+        else {
+          setSingleUser(response.user);
+          console.log(response.user);
+        }
+      }
+    const submitFunc = async(id) => {
+        await getUser()
+        
         const quantity = document.getElementById('quantity').value;
         if (quantity > 0) {
-            const address = prompt("Enter the address:")
+            const address = prompt("Enter the address:", singleUser.address);
             if (!address) {
                 alert("Enter valid address...")
             }
@@ -99,7 +118,7 @@ const ShowItem = () => {
 
     return (
         <>
-        <Header />
+        
             <div className='MainItemDiv '>
                 
                 <div className='photoDiv'><img src={item.photo} alt="Item Photo" width='600rem' height="400rem" /></div>
@@ -139,4 +158,26 @@ const ShowItem = () => {
 }
 
 export default ShowItem
-
+// category
+// :
+// "cycle_small"
+// description
+// :
+// "asdn"
+// homeAvailability
+// :
+// true
+// name
+// :
+// "cycle1"
+// photo
+// :
+// "https://res.cloudinary.com/rk-cycle-photoes/image/upload/v1665430787/yu2g9exc2bxojkz1ikpl.jpg"
+// price
+// :
+// 1234
+// public_id
+// :
+// "yu2g9exc2bxojkz1ikpl"
+// rating
+// : 

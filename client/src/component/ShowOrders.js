@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import getCookie from '../controllers/cookieManagement';
 import SingleOrder from './SingleOrder';
-import Header from "./component/Header";
+import Header from "./Header";
 const ShowOrders = () => {
 
   const [orders, setOrders] = useState([{}])
