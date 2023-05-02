@@ -30,7 +30,7 @@ import UserProfile from "./component/UserProfile";
 
 const LogOutAdmin=()=>{
   sessionStorage.removeItem("type")
-  window.location.href="/";
+  window.location.href="/login";
   return ;
 }
 function App() {
