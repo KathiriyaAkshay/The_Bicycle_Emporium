@@ -2,11 +2,13 @@ import React from "react";
 import { useEffect } from "react";
 import auth from './controllers/authentication'
 import "./css/main.css"
+import Header from "./component/Header";
 const About = () => {
   useEffect(() => { auth() }, [])
 
 
   return (
+    <div><Header />
     <>
     <section
     class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
@@ -35,6 +37,7 @@ const About = () => {
       </div>
       </section>
     </>
+    </div>
   )
 }
 export default About

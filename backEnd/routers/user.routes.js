@@ -1,3 +1,4 @@
+
 const express = require("express")
 const app = express()
 // const auth = require("../middleware/auth") // remaining to authenticate user at front end
@@ -35,6 +36,26 @@ app.post("/createUser", async (req, res) => {
         res.json({ "status": "success", "token": token });
     }
 })
+
+app.patch("/updateUser",async (req, res)=>{
+    console.log("Inside updateUser")
+    const name = req.body.name
+    const email = req.body.email
+    const gender = req.body.gender
+    const dob = req.body.dob
+    const address = req.body.address
+    console.log(email)
+    const tempUser = await User.findOne({email})
+    console.log(tempUser)
+    if (!tempUser) {
+        res.json({ "status": "failed" });
+    }
+    else {
+        await User.updateOne({email}, {$set:{name, gender, dob, address}})
+        res.json({ "status": "success"});
+    }
+})
+
 app.post("/verifyEmail", (req, res) => {
     let number = randomInt(1000, 9999)
     var transporter = nodemailer.createTransport({
@@ -202,8 +223,23 @@ app.post('/getInfo', async (req, res) => {
     if (!user) {
         res.json({ "status": 'no' })
     }
-    res.json({ 'name': user.name, 'email': user.email, 'address': user.address })
+    res.json({ 'name': user.name, 'email': user.email })
 })
+
+app.post('/getUser', async (req, res) => {
+    const token = req.body.token
+    const tokenKey = process.env.PRIVATEKEY
+    if (token == "NOTEXIST") {
+        res.json({ "status": 'no' })
+    }
+    let userToken = jwt.verify(token, tokenKey)
+    let user = await User.findOne({ email: userToken.email })
+    if (!user) {
+        res.json({ "status": 'no' })
+    }
+    res.json({"user":user});
+})
+
 app.post('/getWishlist', async (req, res) => {
     const token = req.body.token
     const tokenKey = process.env.PRIVATEKEY
@@ -238,24 +274,6 @@ app.post('/changePW', async (req, res) => {
     else {
         const pass = await bcrypt.hash(password, 10);
         const status = await User.updateOne({ "email": email }, { $set: { 'password': pass } })
-        if (status) {
-            res.json({ "status": "success" })
-        }
-        else {
-            res.json({ "status": "failed" })
-        }
-    }
-})
-
-app.post('/changeAdd', async (req, res) => {
-    const email = req.body.email
-    const address = req.body.address
-    let user = await User.findOne({ email })
-    if (!user) {
-        res.json({ "status": "failed" })
-    }
-    else {
-        const status = await User.updateOne({ "email": email }, { $set: { 'address': address } })
         if (status) {
             res.json({ "status": "success" })
         }

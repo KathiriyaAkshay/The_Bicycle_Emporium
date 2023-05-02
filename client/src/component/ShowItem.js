@@ -12,6 +12,7 @@ const ShowItem = () => {
 
     const [item, setItem] = useState({})
     const [wishlistStatus, setWishlistStatus] = useState(false)
+    const [singleUser, setSingleUser] = useState({});
 
     const checkStatus = async () => {
         const reqUrl = 'http://localhost:5000/user/checkWishlist';
@@ -79,11 +80,30 @@ const ShowItem = () => {
         }
         return s
     }
-
-    const submitFunc = (id) => {
+    const getUser = async () => {
+        const token = getCookie('jwtoken');
+        const reqUrl = 'http://localhost:5000/user/getUser';
+        const reqOptions = {
+          method: "POST",
+          headers: { 'Content-Type': 'application/json;charset=utf-8' },
+          body: JSON.stringify({ token, status: true })
+        }
+        const result = await fetch(reqUrl, reqOptions);
+        const response = await result.json()
+        if (response.user === "error") {
+          alert("Oops!!! something went wrong. Refresh and try again...");
+        }
+        else {
+          setSingleUser(response.user);
+          console.log(response.user);
+        }
+      }
+    const submitFunc = async(id) => {
+        await getUser()
+        
         const quantity = document.getElementById('quantity').value;
         if (quantity > 0) {
-            const address = prompt("Enter the address:")
+            const address = prompt("Enter the address:", singleUser.address);
             if (!address) {
                 alert("Enter valid address...")
             }

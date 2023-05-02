@@ -4,7 +4,7 @@ const auth = async () => {
     let token=getCookie('jwtoken')
     
     if(token === "NOTEXIST"){
-        window.location.href = "/login"
+        window.location.href = "/"
     }
     const reqOptions = {
         method: "POST",
@@ -17,7 +17,7 @@ const auth = async () => {
     
     if (response.status === "no") {
         // navigate('/login')
-        window.location.href = "/login"
+        window.location.href = "/"
         // return true;
     }
 }

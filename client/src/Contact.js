@@ -12,6 +12,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useState, useEffect } from "react";
 import auth from './controllers/authentication'
 import getCookie from './controllers/cookieManagement'
+import Header from "./component/Header";
 
 const Contact = () => {
   // const navigate = useNavigate();
@@ -63,6 +64,7 @@ const Contact = () => {
   }
 
   return (
+    <div><Header />
     <>
     <section
         class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
@@ -131,6 +133,7 @@ const Contact = () => {
       </div>
       </section>
     </>
+    </div>
   )
 }
 

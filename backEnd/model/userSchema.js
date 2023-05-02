@@ -25,9 +25,18 @@ const userSchema= mongoose.Schema({
         type:String,
         required: true
     },
-    address: {
-        type: String,
-        trim: true
+    gender : {
+        type:String,
+        enum: ["Female", "Male", "other"],
+        default:"Male"
+    },
+    dob:{
+        type:Date,
+        default:Date.now, 
+    },
+    address:{
+        type:String,
+        default:"Add Address"
     },
     wishlist:[{
         item:{
@@ -42,7 +51,6 @@ const userSchema= mongoose.Schema({
         }
     }],
 })
-
 userSchema.methods.generateAuthToken=async function(){
     const token=await jwt.sign({email:this.email,name:this.name},process.env.PRIVATEKEY)
     this.tokens=await this.tokens.concat({token:token})
