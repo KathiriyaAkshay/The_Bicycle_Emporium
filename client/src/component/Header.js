@@ -78,39 +78,7 @@ function Header() {
                         </NavLink>
                       </li>
 
-                      <li className="nav-item dropdown">
-                        <NavLink
-                          className="nav-link  dropdown-toggle"
-                          to="/error"
-                          id="navbarDropdown"
-                          role="button"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="true"
-                        >
-                          Orders
-                        </NavLink>
-
-                        <div
-                          className="dropdown-menu  "
-                          aria-labelledby="navbarDropdown"
-                        >
-                          <NavLink to="/wishlist" className=" dropdown-item">
-                            Wishlist
-                          </NavLink>
-
-                          <NavLink to="/showOrders" className=" dropdown-item">
-                            Show Orders
-                          </NavLink>
-
-                          <NavLink
-                            to="/previousOrders"
-                            className=" dropdown-item"
-                          >
-                            Prev Orders
-                          </NavLink>
-                        </div>
-                      </li>
+                     
 
                       <li className="nav-item dropdown">
                         <NavLink
@@ -133,18 +101,46 @@ function Header() {
                       </li>
 
                       <li className="nav-item">
-                        <NavLink className="nav-link" to="/logout">
-                          LogOut
-                        </NavLink>
+                        
                       </li>
 
+                      <li className="nav-item dropdown">
+                      
                       <NavLink className="" to="/userprofile">
-                        <img
-                          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                          className="w-110 h-110 rounded-circle"
-                          style={{ width: 50, height: 50, marginLeft: "10px" }}
-                        />
-                      </NavLink>
+                      <img
+                        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                        className="w-110 h-110 rounded-circle"
+                        style={{ width: 50, height: 50, marginLeft: "10px" }}
+                      />
+                    </NavLink>
+
+                      <div
+                        className="dropdown-menu  "
+                        aria-labelledby="navbarDropdown"
+                      >
+                        <NavLink to="/wishlist" className=" dropdown-item">
+                          Wishlist
+                        </NavLink>
+
+                        <NavLink to="/showOrders" className=" dropdown-item">
+                          Show Orders
+                        </NavLink>
+
+                        <NavLink
+                          to="/previousOrders"
+                          className=" dropdown-item"
+                        >
+                          Prev Orders
+                        </NavLink>
+
+                        <NavLink className=" dropdown-item" to="/logout">
+                          LogOut
+                        </NavLink>
+
+                      </div>
+                    </li>
+
+                     
                     </ul>
                   </div>
                 </nav>
