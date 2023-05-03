@@ -106,12 +106,12 @@ const Contact = () => {
               <div>
                 <span className='icons' style={{color:'black'}}><DriveFileRenameOutlineIcon /></span>
                 <label htmlFor='name' className='Label' style={{color:'black'}}>Name:</label> <br />
-                <input type="text" name="name" id="name" size="40" className='Input_take' value={name} readOnly /><br /> <br />
+                <input type="text" name="name" id="name" size="40" className='Input_take' value={name} onChange={e => setName(e.target.value)} /><br /> <br />
               </div>
               <div className='ContactinputDivs'>
                 <span className='icons' style={{color:'black'}}><EmailIcon /></span>
                 <label htmlFor="email" className='Label' style={{color:'black'}}>Email:</label><br />
-                <input type="email" name="email" style={{color:'black'}} id="email" size="40" className='Input_take' value={email} readOnly /><br /> <br />
+                <input type="email" name="email" style={{color:'black'}} id="email" size="40" className='Input_take' value={email} onChange={e => setEmail(e.target.value)} /><br /> <br />
               </div>
               <div>
                 <span className='icons' style={{color:'black'}}><CommentIcon /></span>

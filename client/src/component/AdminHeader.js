@@ -23,7 +23,7 @@ function AdminHeader() {
             className="logo"
             src="https://www.sih.gov.in/img1/SIH2022-white-logo.png"/> */}
             <span><img src={require("./logo.jpg")} alt="logo" className='logo' /></span>
-                    <span style={{fontSize:'medium'}}>The Bicycle Emporium</span>
+
                   </a>
                 </Link>
 

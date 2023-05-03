@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import getCookie from '../controllers/cookieManagement'
 import displayRazorpay from '../controllers/buyItem';
+import Header from './Header';
 
 const ShowItem = () => {
 
@@ -47,9 +48,7 @@ const ShowItem = () => {
         }
         setItem(response.item)
     }
-    useEffect(() => {
-        getData()
-    }, [])
+
 
     const addtoWishlist = async (action) => {
         const reqUrl = 'http://localhost:5000/user/addtoWishlist';
@@ -99,8 +98,13 @@ const ShowItem = () => {
           console.log(response.user);
         }
       }
+
+      useEffect(() => {
+        getData()
+        getUser()
+    }, [])
     const submitFunc = async(id) => {
-        await getUser()
+       
         
         const quantity = document.getElementById('quantity').value;
         if (quantity > 0) {
@@ -119,7 +123,7 @@ const ShowItem = () => {
 
     return (
         <>
-        
+            <Header/>
             <div className='MainItemDiv '>
                 
                 <div className='photoDiv'><img src={item.photo} alt="Item Photo" width='600rem' height="400rem" /></div>
